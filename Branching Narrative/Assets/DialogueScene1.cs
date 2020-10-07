@@ -58,58 +58,81 @@ public class DialogueScene1 : MonoBehaviour
         }
         else if (primeInt == 2)
         {
-            
+
             dialogue.SetActive(true);
             Char1name.text = "YOU";
-            Char1speech.text = "Ugh. What a hard day.";
+            Char1speech.text = "*SIGH* Finally! I’m home...";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 3)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "And tomorrow is goign to be even worse!";
-            Char2name.text = "";
-            Char2speech.text = "";
+            ArtChar1.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "MOM";
+            Char2speech.text = "Oh! Welcome home.";
+            Char3name.text = "";
+            Char3speech.text = "";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 4)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "I can't believe Sheila said I was a computer addict.";
+            Char1speech.text = "Is there anything left for dinner?";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 5)
+        { 
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "MOM";
+            Char2speech.text = "You said you were coming back late, I thought you ate already.";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 6)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "What does she know?";
+            Char1speech.text = "Oh...nevermind then.";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 6)
         {
-            ArtChar1.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "COMPUTER";
-            Char2speech.text = "Boooooop";
+            Char2name.text = "MOM";
+            Char2speech.text = "Well I'm going to be in the kitchen, let me know if you need anything. Also don't stay up too late its already 8pm.";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 7)
         {
             ArtChar1.SetActive(false);
-            Char1name.text = "YOU";
-            Char1speech.text = "Ugh. A message. I really shouldn't check that.";
+            Char1name.text = "";
+            Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "PHONE";
+            Char3speech.text = "*BZZT*";
         }
         else if (primeInt == 8)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "I really should just go to bed.";
+            Char1speech.text = "Huh? Oh a text!";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
             // Turn off "Next" button, turn on "Choice" buttons
             nextButton.SetActive(false);
             allowSpace = false;
@@ -119,17 +142,12 @@ public class DialogueScene1 : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "COMPUTER";
-            Char2speech.text = "Beep boop beep";
-        }
-        else if (primeInt == 101)
-        {
             Char1name.text = "YOU";
-            Char1speech.text = "Yeah, yeah, I'm coming!";
+            Char1speech.text = "I guess, I'm just gonna go to my bedroom";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
@@ -137,17 +155,12 @@ public class DialogueScene1 : MonoBehaviour
 
         else if (primeInt == 200)
         {
-            Char1name.text = "COMPUTER";
-            Char1speech.text = "Booooooooooooop";
-            Char2name.text = "";
-            Char2speech.text = "";
-        }
-        else if (primeInt == 201)
-        {
             Char1name.text = "YOU";
-            Char1speech.text = "I can't let Sheila be right rght about me! Sleep, here I come!";
+            Char1speech.text = "My friends are asking me to play games, I guess a couple of games won't hurt.";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -158,9 +171,11 @@ public class DialogueScene1 : MonoBehaviour
     public void Choice1aFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "Just checking one email couldn't hurt";
+        Char1speech.text = "I should be smart about this.";
         Char2name.text = "";
         Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
         primeInt = 99;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -170,9 +185,11 @@ public class DialogueScene1 : MonoBehaviour
     public void Choice1bFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "I really need to be smart about this.";
+        Char1speech.text = "Just checking the text can't hurt.";
         Char2name.text = "";
         Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
         primeInt = 199;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
