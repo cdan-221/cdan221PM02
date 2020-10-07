@@ -130,10 +130,10 @@ public class DialogueScene4b : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             // Turn off "Next" button, turn on "Choice" buttons
-            nextButton.SetActive(false);
+            nextButton.SetActive(true);
             allowSpace = false;
-            Choice1a.SetActive(true); // function Choice1aFunct()
-            Choice1b.SetActive(true); // function Choice1bFunct()
+            Choice1a.SetActive(false); // function Choice1aFunct()
+            Choice1b.SetActive(false); // function Choice1bFunct()
         }
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
