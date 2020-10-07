@@ -519,7 +519,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 648804472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163775df4c2982b4caa0e3e2a83060d9, type: 3}
+  m_Script: {fileID: 11500000, guid: aaf4bfef2244a8a40ac86348c25e1dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   primeInt: 1
@@ -530,7 +530,7 @@ MonoBehaviour:
   Char3name: {fileID: 0}
   Char3speech: {fileID: 0}
   dialogue: {fileID: 1478502663}
-  ArtChar1: {fileID: 0}
+  ArtChar1: {fileID: 330954113}
   ArtBG1: {fileID: 1909170602}
   Choice1a: {fileID: 1811784055}
   Choice1b: {fileID: 131746899}
