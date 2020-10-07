@@ -61,14 +61,14 @@ public class DialogueScene2a : MonoBehaviour
             ArtChar1.SetActive(true);
             dialogue.SetActive(true);
             Char1name.text = "You";
-            Char1speech.text = "I should probably change first...";
+            Char1speech.text = "I should change my clothes...";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 3)
         {
             Char1name.text = "You";
-            Char1speech.text = "I’m not sure if I want to sleep yet.";
+            Char1speech.text = "...I’m not sure if I want to sleep yet.";
             Char2name.text = "";
             Char2speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -118,7 +118,7 @@ public class DialogueScene2a : MonoBehaviour
         else if (primeInt == 100)
         {
             Char1name.text = "You";
-            Char1speech.text = "Well… I should just get in bed then.";
+            Char1speech.text = "Bed, here I come!";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -135,8 +135,8 @@ public class DialogueScene2a : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
     public void Choice3Funct()
     {
-        Char1name.text = "";
-        Char1speech.text = "";
+        Char1name.text = "You";
+        Char1speech.text = "Well… I should just get in bed then.";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 99;
@@ -147,8 +147,8 @@ public class DialogueScene2a : MonoBehaviour
     }
     public void Choice2bFunct()
     {
-        Char1name.text = "";
-        Char1speech.text = "";
+        Char1name.text = "You";
+        Char1speech.text = "It really doesn't hurt to spent a little bit more time!";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 199;
