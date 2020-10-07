@@ -530,7 +530,7 @@ MonoBehaviour:
   Char3name: {fileID: 0}
   Char3speech: {fileID: 0}
   dialogue: {fileID: 1478502663}
-  ArtChar1: {fileID: 0}
+  ArtChar1: {fileID: 330954113}
   ArtBG1: {fileID: 1909170602}
   Choice1a: {fileID: 1811784055}
   Choice1b: {fileID: 131746899}
@@ -711,7 +711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &786056857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1520,7 +1520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1811784056
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e76e95feba7db2040ab63ce2a77b7413, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 540018ee1c2800d4fb62d7bb02ca3588, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

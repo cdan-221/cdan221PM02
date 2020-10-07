@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class DialogueScene3 : MonoBehaviour {
+public class DialogueScene4a : MonoBehaviour {
         public int primeInt = 1; // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -53,61 +53,63 @@ public void talking(){         // main story function. Players hit next to progr
                ArtChar1.SetActive(false);
                 dialogue.SetActive(true);
                 Char1name.text = "YOU";
-                Char1speech.text = "This is so comfy. I might be able to fall asleep right now...";
+                Char1speech.text = "Time to drift off to the dream world. This shouldn’t be too hard.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
                 Char1name.text = "YOU";
-                Char1speech.text = "..........";
+                Char1speech.text = "I really can’t believe the day I had today.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
                 Char1name.text = "YOU";
-                Char1speech.text = "Sigh..... I can't sleep.";
+                Char1speech.text = "Sheila’s comment, my mom throwing out my comic books…";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 5){
                 Char1name.text = "YOU";
-                Char1speech.text = "*yawn*";
+                Char1speech.text = "I really hope tomorrow’s going to be better.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
-               ArtChar1.SetActive(true);
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "PHONE";
-                Char2speech.text = "bzzzzzzzt.";
+                Char1name.text = "YOU";
+                Char1speech.text = ".... Maybe it won’t be. But at least it’s a new day.";
+                Char2name.text = "";
+                Char2speech.text = "";
         }
        else if (primeInt ==7){
-               ArtChar1.SetActive(false);
                 Char1name.text = "YOU";
-                Char1speech.text = "..... It wouldn't hurt to check my phone.";
+                Char1speech.text = "How can I fall asleep quickly....";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 8){
-               ArtChar1.SetActive(true);
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "PHONE";
-                Char2speech.text = "BZZZZZZZZZZT.";
+                Char1name.text = "YOU";
+                Char1speech.text = "Oh I know! I can count sheep.";
+                Char2name.text = "";
+                Char2speech.text = "";
         }
         else if (primeInt == 9){
-               ArtChar1.SetActive(false);
                 Char1name.text = "YOU";
-                Char1speech.text = "But I really need to sleep.";
+                Char1speech.text = "1.....";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
         else if (primeInt == 10){
                 Char1name.text = "YOU";
-                Char1speech.text = "Should I respond to my phone or ignore it?";
+                Char1speech.text = "2........";
+                Char2name.text = "";
+                Char2speech.text = "";        
+        }
+        else if (primeInt == 11){
+                Char1name.text = "YOU";
+                Char1speech.text = "....3......";
                 Char2name.text = "";
                 Char2speech.text = "";
 
@@ -115,19 +117,19 @@ public void talking(){         // main story function. Players hit next to progr
                 // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1a.SetActive(true); // function Choice1aFunct()
+                Choice1a.SetActive(false); // function Choice1aFunct()
                 Choice1b.SetActive(true); // function Choice1bFunct()
         }
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 100){
-                Char1name.text = "YOU";
-                Char1speech.text = "I'm just gonna rest my eyes for a bit and see what happens.";
+                Char1name.text = "";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";     
         }
        else if (primeInt == 200){
-                Char1name.text = "YOU";
-                Char1speech.text = "I'm just going to quickly check it.";
+                Char1name.text = "";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";               
         }
@@ -136,7 +138,7 @@ public void talking(){         // main story function. Players hit next to progr
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
                 Char1name.text = "YOU";
-                Char1speech.text = "I'm just gonna rest my eyes for a bit and see what happens.";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 99;
@@ -147,7 +149,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
         public void Choice1bFunct(){
                 Char1name.text = "YOU";
-                Char1speech.text = "I'm just going to quickly check it.";
+                Char1speech.text = "zzzzzzZZZZZZZZzzzzzz...";
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 199;
