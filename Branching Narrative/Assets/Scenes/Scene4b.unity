@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Can't sleep
+  m_Text: Text your friend
 --- !u!222 &70996109
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &131746900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -346,7 +346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &330954114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -363,8 +363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1280, y: 720}
+  m_AnchoredPosition: {x: 369, y: -37}
+  m_SizeDelta: {x: 880, y: 570}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330954115
 MonoBehaviour:
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d106ee2adde2bf44988539af0bc01274, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -533,7 +533,6 @@ MonoBehaviour:
   ArtChar1: {fileID: 330954113}
   ArtBG1: {fileID: 1909170602}
   Choice1a: {fileID: 1811784055}
-  Choice1b: {fileID: 131746899}
   NextScene1Button: {fileID: 786056856}
   NextScene2Button: {fileID: 1401698358}
   nextButton: {fileID: 2140793847}
@@ -1205,7 +1204,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Count sheep
+  m_Text: 
 --- !u!222 &1264095872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1493,7 +1492,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Text Again
 --- !u!222 &1569729251
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1538,7 +1537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270, y: -296}
+  m_AnchoredPosition: {x: -97, y: -296}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1811784057
