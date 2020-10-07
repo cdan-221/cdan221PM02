@@ -61,7 +61,7 @@ public class DialogueScene1 : MonoBehaviour
 
             dialogue.SetActive(true);
             Char1name.text = "YOU";
-            Char1speech.text = "*Sigh* Finally! I’m home...";
+            Char1speech.text = "*SIGH* Finally! I’m home...";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -123,7 +123,7 @@ public class DialogueScene1 : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "PHONE";
-            Char3speech.text = "*Beep*";
+            Char3speech.text = "*BZZT*";
         }
         else if (primeInt == 8)
         {
