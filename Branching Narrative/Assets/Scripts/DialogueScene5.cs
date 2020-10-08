@@ -134,6 +134,9 @@ public class DialogueScene5 : MonoBehaviour
             Char1speech.text = "Not yet finished";
             Char2name.text = "";
             Char2speech.text = "";
+            nextButton.SetActive(false);
+            allowSpace = false;
+            NextScene1Button.SetActive(true);
         }
         else if (primeInt == 101)
         {
@@ -152,6 +155,9 @@ public class DialogueScene5 : MonoBehaviour
             Char1speech.text = "Not yet finished";
             Char2name.text = "";
             Char2speech.text = "";
+            nextButton.SetActive(false);
+            allowSpace = false;
+            NextScene1Button.SetActive(true);
         }
         else if (primeInt == 201)
         {
