@@ -160,6 +160,9 @@ public class DialogueScene4b : MonoBehaviour
             Char1speech.text = "Do not think you can fool me, human. Where will we find him?";
             Char2name.text = "";
             Char2speech.text = "";
+            nextButton.SetActive(false);
+            allowSpace = false;
+            NextScene1Button.SetActive(true);
         }
         else if (primeInt == 201)
         {

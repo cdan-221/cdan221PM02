@@ -163,6 +163,9 @@ public class DialogueScene2b : MonoBehaviour
             Char1speech.text = "Bed, here I come!";
             Char2name.text = "";
             Char2speech.text = "";
+            nextButton.SetActive(false);
+            allowSpace = false;
+            NextScene1Button.SetActive(true);
         }
 
         else if (primeInt == 200)
@@ -171,6 +174,9 @@ public class DialogueScene2b : MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "JIMMY";
             Char2speech.text = "There we go! There is a lot of choices!!";
+            nextButton.SetActive(false);
+            allowSpace = false;
+            NextScene1Button.SetActive(true);
         }
     }
 

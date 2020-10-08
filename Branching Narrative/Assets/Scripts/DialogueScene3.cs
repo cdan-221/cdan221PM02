@@ -123,13 +123,19 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "YOU";
                 Char1speech.text = "I'm just gonna rest my eyes for a bit and see what happens.";
                 Char2name.text = "";
-                Char2speech.text = "";     
+                Char2speech.text = "";
+            nextButton.SetActive(false);
+            allowSpace = false;
+            NextScene1Button.SetActive(true);
         }
        else if (primeInt == 200){
                 Char1name.text = "YOU";
                 Char1speech.text = "I'm just going to quickly check it.";
                 Char2name.text = "";
-                Char2speech.text = "";               
+                Char2speech.text = "";
+            nextButton.SetActive(false);
+            allowSpace = false;
+            NextScene1Button.SetActive(true);
         }
      }
 
