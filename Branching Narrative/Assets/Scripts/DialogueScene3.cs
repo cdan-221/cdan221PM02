@@ -135,7 +135,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
             nextButton.SetActive(false);
             allowSpace = false;
-            NextScene1Button.SetActive(true);
+            NextScene2Button.SetActive(true);
         }
      }
 
