@@ -111,13 +111,19 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "YOU";
                 Char1speech.text = "....3......";
                 Char2name.text = "";
-                Char2speech.text = "";
+                Char2speech.text = "";        
+        }
+        else if (primeInt == 12){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "PHONE";
+                Char2speech.text = "Bzzzzzt...";
 
                 
                 // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1a.SetActive(false); // function Choice1aFunct()
+                Choice1a.SetActive(true); // function Choice1aFunct()
                 Choice1b.SetActive(true); // function Choice1bFunct()
         }
 // ENCOUNTER AFTER CHOICE #1
@@ -128,7 +134,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
             nextButton.SetActive(false);
             allowSpace = false;
-            NextScene1Button.SetActive(true);
+            NextScene2Button.SetActive(true);
         }
        else if (primeInt == 200){
                 Char1name.text = "";
@@ -144,7 +150,7 @@ public void talking(){         // main story function. Players hit next to progr
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
                 Char1name.text = "YOU";
-                Char1speech.text = "";
+                Char1speech.text = "Huh? A text? I wonder who's up this late.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 99;
