@@ -16,6 +16,7 @@ public class DialogueScene4b : MonoBehaviour
     public Text Char3speech;
     public GameObject dialogue;
     public GameObject ArtChar1;
+    public GameObject ArtChar2;
     public GameObject ArtBG1;
     public GameObject Choice1a;
     public GameObject Choice1b;
@@ -30,6 +31,7 @@ public class DialogueScene4b : MonoBehaviour
     {         // initial visibility settings
         dialogue.SetActive(false);
         ArtChar1.SetActive(false);
+        ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -146,27 +148,17 @@ public class DialogueScene4b : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            ArtChar1.SetActive(true);
+            ArtBG1.SetActive(true);
+            ArtChar2.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "PHONE";
+            Char2name.text = "???";
             Char2speech.text = "...";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
         }
-        else if (primeInt == 101)
-        {
-            ArtChar1.SetActive(true);
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "PHONE";
-            Char2speech.text = "...";
-            nextButton.SetActive(false);
-            allowSpace = false;
-            NextScene1Button.SetActive(true);
-        }
-
+        
         else if (primeInt == 200)
         {
             Char1name.text = "YOU";
@@ -177,16 +169,7 @@ public class DialogueScene4b : MonoBehaviour
             allowSpace = false;
             NextScene2Button.SetActive(true);
         }
-        else if (primeInt == 201)
-        {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "YOU";
-            Char2speech.text = "Ragu hangs out in a rough part of town. I'll take you now.";
-            nextButton.SetActive(false);
-            allowSpace = false;
-            NextScene2Button.SetActive(true);
-        }
+
     }
 
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
@@ -215,9 +198,12 @@ public class DialogueScene4b : MonoBehaviour
         allowSpace = true;
     }
 
-    public void SceneChange5()
+    public void SceneChange5a()
+    {
+        SceneManager.LoadScene("End_Lose");
+    }
+    public void SceneChange5b()
     {
         SceneManager.LoadScene("Scene5");
     }
-    
 }
