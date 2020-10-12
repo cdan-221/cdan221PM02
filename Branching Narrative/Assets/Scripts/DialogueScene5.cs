@@ -211,12 +211,12 @@ public class DialogueScene5 : MonoBehaviour
         allowSpace = true;
     }
 
-    public void SceneChangeLose()
-    {
-        SceneManager.LoadScene("SceneLose");
-    }
     public void SceneChange6()
     {
         SceneManager.LoadScene("Scene6");
+    }
+    public void SceneChangeLose()
+    {
+        SceneManager.LoadScene("SceneLose");
     }
 }
