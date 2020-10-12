@@ -136,7 +136,7 @@ public class DialogueScene2a : MonoBehaviour
             Char2speech.text = "";
             nextButton.SetActive(false);
             allowSpace = false;
-            NextScene1Button.SetActive(true);
+            NextScene2Button.SetActive(true);
         }
     }
 
