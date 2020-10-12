@@ -105,7 +105,7 @@ public class DialogueScene5 : MonoBehaviour
         else if (primeInt == 8)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "If i’m quite i won’t get caught.";
+            Char1speech.text = "If i’m quiet i won’t get caught.";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -114,13 +114,27 @@ public class DialogueScene5 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Alright let's do it.";
+            Char2speech.text = "Are you sure you wanna risk it?";
         }
         else if (primeInt == 10) {
             Char1name.text = "JIMMY";
-            Char1speech.text = "You better not blame me if you get caught";
+            Char1speech.text = "Your mom is terrifying when she catches you, she's like a demon.";
             Char2name.text = "";
-            Char2speech.text = ""; 
+            Char2speech.text = "";
+        }
+        else if (primeInt == 11)
+        { 
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "YOU";
+            Char2speech.text = "Aren't you the one who convinced me to play?";
+        }
+        else if (primeInt == 12)
+        {
+            Char1name.text = "JIMMY";
+            Char1speech.text = "Yea but now I kinda have a bad feeling about this.";
+            Char2name.text = "";
+            Char2speech.text = "";
             // Turn off "Next" button, turn on "Choice" buttons
             nextButton.SetActive(false);
             allowSpace = false;
@@ -130,8 +144,8 @@ public class DialogueScene5 : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            Char1name.text = "Not yet finished";
-            Char1speech.text = "Not yet finished";
+            Char1name.text = "JIMMY";
+            Char1speech.text = "Don't blame me if you get caught.";
             Char2name.text = "";
             Char2speech.text = "";
             nextButton.SetActive(false);
@@ -140,8 +154,8 @@ public class DialogueScene5 : MonoBehaviour
         }
         else if (primeInt == 101)
         {
-            Char1name.text = "Not yet finished";
-            Char1speech.text = "Not yet finished";
+            Char1name.text = "";
+            Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
             nextButton.SetActive(false);
@@ -151,8 +165,8 @@ public class DialogueScene5 : MonoBehaviour
 
         else if (primeInt == 200)
         {
-            Char1name.text = "Not yet finished";
-            Char1speech.text = "Not yet finished";
+            Char1name.text = "JIMMY";
+            Char1speech.text = "Alright, cya man.";
             Char2name.text = "";
             Char2speech.text = "";
             nextButton.SetActive(false);
@@ -163,8 +177,8 @@ public class DialogueScene5 : MonoBehaviour
         {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "Not yet finished";
-            Char2speech.text = "Not yet finished";
+            Char2name.text = "";
+            Char2speech.text = "";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -176,8 +190,8 @@ public class DialogueScene5 : MonoBehaviour
     {
         Char1name.text = "";
         Char1speech.text = "";
-        Char2name.text = "You";
-        Char2speech.text = "I don't know what you're talking about!";
+        Char2name.text = "YOU";
+        Char2speech.text = "Don't be such a killjoy, shut up and play.";
         primeInt = 99;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -188,8 +202,8 @@ public class DialogueScene5 : MonoBehaviour
     {
         Char1name.text = "";
         Char1speech.text = "";
-        Char2name.text = "You";
-        Char2speech.text = "Sure, anything you want... just lay off the club.";
+        Char2name.text = "YOU";
+        Char2speech.text = "You know what, you're right. I should probably go.";
         primeInt = 199;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
