@@ -665,7 +665,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1702938660}
-        m_MethodName: Choice6Funct
+        m_MethodName: Choice5Funct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1173,7 +1173,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1702938660}
-        m_MethodName: SceneChange6
+        m_MethodName: SceneChange5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

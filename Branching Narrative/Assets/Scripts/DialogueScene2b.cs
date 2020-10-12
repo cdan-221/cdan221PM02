@@ -176,7 +176,7 @@ public class DialogueScene2b : MonoBehaviour
             Char2speech.text = "There we go! There is a lot of choices!!";
             nextButton.SetActive(false);
             allowSpace = false;
-            NextScene1Button.SetActive(true);
+            NextScene2Button.SetActive(true);
         }
     }
 
@@ -196,7 +196,7 @@ public class DialogueScene2b : MonoBehaviour
         nextButton.SetActive(true);
         allowSpace = true;
     }
-    public void Choice6Funct()
+    public void Choice5Funct()
     {
         ArtChar1.SetActive(false);
         ArtChar2.SetActive(true);
@@ -216,8 +216,8 @@ public class DialogueScene2b : MonoBehaviour
     {
         SceneManager.LoadScene("Scene3");
     }
-    public void SceneChange6()
+    public void SceneChange5()
     {
-        SceneManager.LoadScene("Scene6");
+        SceneManager.LoadScene("Scene5");
     }
 }
