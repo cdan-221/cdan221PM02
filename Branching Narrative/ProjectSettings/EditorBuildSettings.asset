@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End_K.O.'d.unity
     guid: 7431e57b4529dcd488cbdfd5476a68bf
+  - enabled: 1
+    path: Assets/Scenes/Scene5Lose.unity
+    guid: 68e34b8266050394ca4d9045b8ca0821
   m_configObjects: {}

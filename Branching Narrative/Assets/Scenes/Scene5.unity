@@ -484,9 +484,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Go to bedroom
-
-'
+  m_Text: Continue Gaming
 --- !u!222 &284472902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1802,7 +1800,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 613831199}
-        m_MethodName: SceneChange2b
+        m_MethodName: SceneChangeLose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2095,7 +2093,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 613831199}
-        m_MethodName: SceneChange2a
+        m_MethodName: SceneChange6
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

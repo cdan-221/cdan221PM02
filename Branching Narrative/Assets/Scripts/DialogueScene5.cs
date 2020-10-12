@@ -171,7 +171,7 @@ public class DialogueScene5 : MonoBehaviour
             Char2speech.text = "";
             nextButton.SetActive(false);
             allowSpace = false;
-            NextScene1Button.SetActive(true);
+            NextScene2Button.SetActive(true);
         }
         else if (primeInt == 201)
         {
@@ -213,7 +213,7 @@ public class DialogueScene5 : MonoBehaviour
 
     public void SceneChangeLose()
     {
-        SceneManager.LoadScene("SceneLose");
+        SceneManager.LoadScene("Scene5Lose");
     }
     public void SceneChange6()
     {
