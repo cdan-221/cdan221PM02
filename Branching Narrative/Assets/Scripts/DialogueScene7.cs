@@ -95,7 +95,7 @@ public class DialogueScene7 : MonoBehaviour
         else if (primeInt == 6)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "Or I can try to dream about something to sleep!";
+            Char1speech.text = "Or I can try to to use my imagination!";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -104,7 +104,7 @@ public class DialogueScene7 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "VOICE";
-            Char2speech.text = "Or... You can chit chat with me a little bit. I promise it will help more than sleeping pills.";
+            Char2speech.text = "Or... You cAn ChIT CHaT with ME a LitTLE bit. I PROMISE it WiLL HELP MoRe ThaN SLEEPING PILLS.";
         }
         else if (primeInt == 8)
         {
@@ -184,10 +184,10 @@ public class DialogueScene7 : MonoBehaviour
     }
     public void Choice8bFunct()
     {
-        Char1name.text = "";
-        Char1speech.text = "";
-        Char2name.text = "VOICE";
-        Char2speech.text = "I can do whatever I want in my dream!";
+        Char1name.text = "YOU";
+        Char1speech.text = "I can do whatever I want in my dream!";
+        Char2name.text = "";
+        Char2speech.text = "";
         primeInt = 199;
         Choice8a.SetActive(false);
         Choice8b.SetActive(false);
