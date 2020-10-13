@@ -66,6 +66,8 @@ public class DialogueScene4b : MonoBehaviour
             Char1speech.text = "Let's see...";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 3)
         {
@@ -74,6 +76,8 @@ public class DialogueScene4b : MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "PHONE";
             Char2speech.text = "U up?";
+            Char3name.text = "";
+            Char3speech.text = "";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 4)
@@ -83,6 +87,8 @@ public class DialogueScene4b : MonoBehaviour
             Char1speech.text = "Yes?";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 5)
         {
@@ -91,6 +97,8 @@ public class DialogueScene4b : MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "PHONE";
             Char2speech.text = "...";
+            Char3name.text = "";
+            Char3speech.text = "";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 6)
@@ -99,7 +107,9 @@ public class DialogueScene4b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "PHONE";
-            Char2speech.text = "... \n ...";
+            Char2speech.text = "... \n...";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 7)
         {
@@ -108,6 +118,8 @@ public class DialogueScene4b : MonoBehaviour
             Char1speech.text = "Hmm...";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 8)
         {
@@ -116,6 +128,8 @@ public class DialogueScene4b : MonoBehaviour
             Char1speech.text = "";
             Char2name.text = "PHONE";
             Char2speech.text = "...";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 9)
         {
@@ -123,14 +137,18 @@ public class DialogueScene4b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "PHONE";
-            Char2speech.text = "...";
+            Char2speech.text = "... \n...";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 10)
         {
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "PHONE";
-            Char2speech.text = "...";
+            Char2speech.text = "... \n... \n...";
+            Char3name.text = "";
+            Char3speech.text = "";
         }
         else if (primeInt == 11)
         {
@@ -139,6 +157,8 @@ public class DialogueScene4b : MonoBehaviour
             Char1speech.text = "What's taking him so long?";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
             // Turn off "Next" button, turn on "Choice" buttons
             nextButton.SetActive(false);
             allowSpace = false;
@@ -152,8 +172,10 @@ public class DialogueScene4b : MonoBehaviour
             ArtChar2.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "???";
-            Char2speech.text = "...";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "???";
+            Char3speech.text = ". .   . \n.        .   . . . . \n..          .   ...    .";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
@@ -165,6 +187,8 @@ public class DialogueScene4b : MonoBehaviour
             Char1speech.text = "I think I'll play Anti Attack";
             Char2name.text = "";
             Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -179,6 +203,8 @@ public class DialogueScene4b : MonoBehaviour
         Char1speech.text = "I'll just wait a bit more...";
         Char2name.text = "";
         Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
         primeInt = 99;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -191,6 +217,8 @@ public class DialogueScene4b : MonoBehaviour
         Char1speech.text = "Argh! Whatever! I'll just go play";
         Char2name.text = "";
         Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
         primeInt = 199;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
