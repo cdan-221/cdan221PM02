@@ -99,7 +99,7 @@ public class DialogueScene4b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "PHONE";
-            Char2speech.text = "...";
+            Char2speech.text = "... \n ...";
         }
         else if (primeInt == 7)
         {
