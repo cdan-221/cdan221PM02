@@ -17,6 +17,8 @@ public class DialogueScene6 : MonoBehaviour
     public GameObject dialogue;
     public GameObject ArtChar1;
     public GameObject ArtChar2;
+    public GameObject ArtChar3;
+    public GameObject ArtChar4;
     public GameObject ArtBG1;
     public GameObject Choice1a;
     public GameObject Choice1b;
@@ -59,10 +61,9 @@ public class DialogueScene6 : MonoBehaviour
         }
         else if (primeInt == 2)
         {
-
             dialogue.SetActive(true);
             Char1name.text = "YOU";
-            Char1speech.text = "";
+            Char1speech.text = "You were right Jimmy, a few more games wouldn't hurt!";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -70,11 +71,11 @@ public class DialogueScene6 : MonoBehaviour
         }
         else if (primeInt == 3)
         {
-            ArtChar1.SetActive(true);
+            ArtChar3.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "MOM";
-            Char2speech.text = "";
+            Char2name.text = "JIMMY";
+            Char2speech.text = "Right? More fun doesn't hurt anybody!";
             Char3name.text = "";
             Char3speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -82,7 +83,7 @@ public class DialogueScene6 : MonoBehaviour
         else if (primeInt == 4)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "";
+            Char1speech.text = "Ok, lets keep going then!";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -92,26 +93,28 @@ public class DialogueScene6 : MonoBehaviour
         {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "MOM";
-            Char2speech.text = "";
+            Char2name.text = "JIMMY";
+            Char2speech.text = "Sure thing!";
             Char3name.text = "";
             Char3speech.text = "";
         }
         else if (primeInt == 6)
         {
-            Char1name.text = "YOU";
+            ArtChar3.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
+            Char3name.text = "MOM";
+            Char3speech.text = "Huh?! You're still awake?";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 6)
         {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "MOM";
+            Char1name.text = "YOU";
+            Char1speech.text = "Oh no, that's my mom she found out.";
+            Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
@@ -119,23 +122,35 @@ public class DialogueScene6 : MonoBehaviour
         else if (primeInt == 7)
         {
             ArtChar1.SetActive(false);
+            ArtChar4.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char2name.text = "JIMMY";
+            Char2speech.text = "I told you if you get caught it isnt my fault, you're on your own buddy.";
             Char3name.text = "";
             Char3speech.text = "";
         }
         else if (primeInt == 8)
         {
+            ArtChar4.SetActive(false);
             Char1name.text = "YOU";
-            Char1speech.text = "";
+            Char1speech.text = "Huh? How you going to run from this??";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
             Char3speech.text = "";
-            // Turn off "Next" button, turn on "Choice" buttons
-            nextButton.SetActive(false);
+        }
+            else if (primeInt == 9)
+            {
+                ArtChar2.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "MOM";
+                Char3speech.text = "GO TO BED!";
+                // Turn off "Next" button, turn on "Choice" buttons
+                nextButton.SetActive(false);
             allowSpace = false;
             Choice1a.SetActive(true); // function Choice1aFunct()
             Choice1b.SetActive(true); // function Choice1bFunct()
@@ -143,8 +158,9 @@ public class DialogueScene6 : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
+            ArtChar2.SetActive(false);
             Char1name.text = "YOU";
-            Char1speech.text = "";
+            Char1speech.text = "No, I don't want to!";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -156,8 +172,9 @@ public class DialogueScene6 : MonoBehaviour
 
         else if (primeInt == 200)
         {
+            ArtChar2.SetActive(false);
             Char1name.text = "YOU";
-            Char1speech.text = "";
+            Char1speech.text = "Yes, mom...";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -171,10 +188,11 @@ public class DialogueScene6 : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
     public void Choice6aFunct()
     {
-        Char1name.text = "YOU";
+        
+        Char1name.text = "";
         Char1speech.text = "";
-        Char2name.text = "";
-        Char2speech.text = "";
+        Char2name.text = "MOM";
+        Char2speech.text = "*WHACK*";
         Char3name.text = "";
         Char3speech.text = "";
         primeInt = 99;
@@ -182,11 +200,12 @@ public class DialogueScene6 : MonoBehaviour
         Choice1b.SetActive(false);
         nextButton.SetActive(true);
         allowSpace = true;
+        
     }
     public void Choice6bFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "";
+        Char1speech.text = "*Sigh*";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";
@@ -198,12 +217,12 @@ public class DialogueScene6 : MonoBehaviour
         allowSpace = true;
     }
 
-    public void SceneChange8a()
+    public void SceneChangeEnd_KOd()
     {
-        SceneManager.LoadScene("Scene8a");
+        SceneManager.LoadScene("End_KOd");
     }
-    public void SceneChange8b()
+    public void SceneChange7()
     {
-        SceneManager.LoadScene("Scene8b");
+        SceneManager.LoadScene("Scene7");
     }
 }
