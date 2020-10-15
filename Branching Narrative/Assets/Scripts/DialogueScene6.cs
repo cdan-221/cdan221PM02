@@ -33,6 +33,9 @@ public class DialogueScene6 : MonoBehaviour
     {         // initial visibility settings
         dialogue.SetActive(false);
         ArtChar1.SetActive(false);
+        ArtChar2.SetActive(false);
+        ArtChar3.SetActive(false);
+        ArtChar4.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
