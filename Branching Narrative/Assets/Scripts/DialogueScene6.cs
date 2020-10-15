@@ -166,7 +166,7 @@ public class DialogueScene6 : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "MOM";
-            Char3speech.text = "*WHACK*";
+            Char3speech.text = "*GRABS FLIP FLOPS*";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
