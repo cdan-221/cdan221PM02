@@ -256,7 +256,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Check Computer
+  m_Text: Check your computer
 --- !u!222 &68996767
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1526,7 +1526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Get in Bed
+  m_Text: Get in bed
 --- !u!222 &1035770584
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2044,7 +2044,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Check Computer
+  m_Text: Check Your Computer
 --- !u!222 &1653502238
 CanvasRenderer:
   m_ObjectHideFlags: 0

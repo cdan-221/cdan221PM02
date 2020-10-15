@@ -18,6 +18,7 @@ public class DialogueScene9b : MonoBehaviour
     public GameObject ArtChar1;
     public GameObject ArtChar2;
     public GameObject ArtBG1;
+    public GameObject ArtBG2;
     public GameObject Choice10a;
     public GameObject Choice10b;
     public GameObject NextScene1Button;
@@ -33,6 +34,7 @@ public class DialogueScene9b : MonoBehaviour
         ArtChar1.SetActive(false);
         ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
+        ArtBG2.SetActive(false);
         Choice10a.SetActive(false);
         Choice10b.SetActive(false);
         NextScene1Button.SetActive(false);
@@ -129,10 +131,21 @@ public class DialogueScene9b : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "DEMON";
-            Char2speech.text = "Hey, cry baby... Close your eyes!";
+            ArtChar2.SetActive(false);
+            ArtBG2.SetActive(true);
+            ArtBG1.SetActive(false);
+            Char1name.text = "YOU";
+            Char1speech.text = "NO!";
+            Char2name.text = "";
+            Char2speech.text = "";
+        }
+
+        else if (primeInt ==101)
+        {
+            Char1name.text = "YOU";
+            Char1speech.text = "I...it was sleep paralysis... \n I'm awake, it was just the dream...";
+            Char2name.text = "";
+            Char2speech.text = "";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
@@ -154,7 +167,7 @@ public class DialogueScene9b : MonoBehaviour
     public void Choice10aFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "(No, this can't be hapening!)";
+        Char1speech.text = "(I have to wake up! I have to push it away!)";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 99;
@@ -178,7 +191,7 @@ public class DialogueScene9b : MonoBehaviour
 
     public void SceneChange10a()
     {
-        SceneManager.LoadScene("End_Lose");
+        SceneManager.LoadScene("End_Win");
     }
     public void SceneChange10b()
     {

@@ -18,6 +18,7 @@ public class DialogueScene9a : MonoBehaviour
     public GameObject ArtChar1;
     public GameObject ArtChar2;
     public GameObject ArtBG1;
+    public GameObject ArtBG2;
     public GameObject Choice10a;
     public GameObject Choice10b;
     public GameObject NextScene1Button;
@@ -33,6 +34,7 @@ public class DialogueScene9a : MonoBehaviour
         ArtChar1.SetActive(false);
         ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
+        ArtBG2.SetActive(false);
         Choice10a.SetActive(false);
         Choice10b.SetActive(false);
         NextScene1Button.SetActive(false);
@@ -122,10 +124,30 @@ public class DialogueScene9a : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "DEMON";
-            Char2speech.text = "Maybe... This will teach you something...";
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(false);
+            ArtBG2.SetActive(true);
+            ArtBG1.SetActive(false);
+            Char1name.text = "YOU";
+            Char1speech.text = "Ahhh!!!";
+            Char2name.text = "";
+            Char2speech.text = "";
+        }
+
+        else if (primeInt == 101)
+        {
+            Char1name.text = "YOU";
+            Char1speech.text = "*Heavy breathing*  I am awake... \n It looked so real!";
+            Char2name.text = "";
+            Char2speech.text = "";
+        }
+
+        else if (primeInt == 102)
+        {
+            Char1name.text = "YOU";
+            Char1speech.text = "It was just a dream... I should sleep with my nightlight on.";
+            Char2name.text = "";
+            Char2speech.text = "";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
@@ -136,7 +158,15 @@ public class DialogueScene9a : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "You know, you hurt my feelings, very bad!";
+            Char2speech.text = "You hurt my feelings, very bad! \n Now now... \n You have to be punished!";
+        }
+
+        else if (primeInt == 201)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "DEMON";
+            Char2speech.text = "Huh... Even your little nightlight can't save you now! \n YOU ARE MINE!";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -147,7 +177,7 @@ public class DialogueScene9a : MonoBehaviour
     public void Choice10aFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "(I...I can't do anything...)";
+        Char1speech.text = "(No way! This is just my imagination! If I ... if I struggle enough, I might wake up!) \n *struggle* *struggle*";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 99;
@@ -171,7 +201,7 @@ public class DialogueScene9a : MonoBehaviour
 
     public void SceneChange10a()
     {
-        SceneManager.LoadScene("End_Lose");
+        SceneManager.LoadScene("End_Win");
     }
     public void SceneChange10b()
     {

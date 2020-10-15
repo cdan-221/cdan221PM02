@@ -812,9 +812,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Take Sleeping Pills
-
-'
+  m_Text: Sleep
 --- !u!222 &399910229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2549,7 +2547,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Don't Take Sleeping Pills
+  m_Text: Go To Sleep
 --- !u!222 &2047439523
 CanvasRenderer:
   m_ObjectHideFlags: 0

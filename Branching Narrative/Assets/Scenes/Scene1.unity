@@ -962,7 +962,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Check Phone
+  m_Text: Check phone
 --- !u!222 &883515070
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2165,7 +2165,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Go to Bedroom
+  m_Text: Go to bedroom
 --- !u!222 &2082135398
 CanvasRenderer:
   m_ObjectHideFlags: 0

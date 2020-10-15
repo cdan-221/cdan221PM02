@@ -1046,7 +1046,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Close your eyes
+  m_Text: Close Your Eyes
 --- !u!222 &1044000690
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1124,7 +1124,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Check your phone
+  m_Text: Check Your Phone
 --- !u!222 &1337484033
 CanvasRenderer:
   m_ObjectHideFlags: 0
