@@ -112,7 +112,7 @@ public class DialogueScene4c : MonoBehaviour
         else if (primeInt == 9)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "Or I should just tell her I couldn't find";
+            Char1speech.text = "Or I should just tell her I couldn't find it.";
             Char2name.text = "";
             Char2speech.text = "";
             // Turn off "Next" button, turn on "Choice" buttons
