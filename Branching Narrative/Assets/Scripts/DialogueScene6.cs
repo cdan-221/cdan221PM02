@@ -161,13 +161,12 @@ public class DialogueScene6 : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            ArtChar2.SetActive(false);
-            Char1name.text = "YOU";
-            Char1speech.text = "No, I don't want to!";
+            Char1name.text = "";
+            Char1speech.text = "";
             Char2name.text = "";
             Char2speech.text = "";
-            Char3name.text = "";
-            Char3speech.text = "";
+            Char3name.text = "MOM";
+            Char3speech.text = "*WHACK*";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
@@ -192,10 +191,10 @@ public class DialogueScene6 : MonoBehaviour
     public void Choice1aFunct()
     {
         
-        Char1name.text = "";
-        Char1speech.text = "";
-        Char2name.text = "MOM";
-        Char2speech.text = "*WHACK*";
+        Char1name.text = "YOU";
+        Char1speech.text = "No! I don't want to!!";
+        Char2name.text = "";
+        Char2speech.text = "";
         Char3name.text = "";
         Char3speech.text = "";
         primeInt = 99;
