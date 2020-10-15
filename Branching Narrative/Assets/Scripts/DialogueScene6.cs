@@ -189,7 +189,7 @@ public class DialogueScene6 : MonoBehaviour
     }
 
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-    public void Choice6aFunct()
+    public void Choice1aFunct()
     {
         
         Char1name.text = "";
@@ -205,7 +205,7 @@ public class DialogueScene6 : MonoBehaviour
         allowSpace = true;
         
     }
-    public void Choice6bFunct()
+    public void Choice1bFunct()
     {
         Char1name.text = "YOU";
         Char1speech.text = "*Sigh*";
