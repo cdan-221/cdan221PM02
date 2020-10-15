@@ -168,6 +168,7 @@ public class DialogueScene4b : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
+Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(10f);
             ArtBG1.SetActive(true);
             ArtChar2.SetActive(true);
             Char1name.text = "";
