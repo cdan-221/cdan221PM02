@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 
 public class DialogueScene1 : MonoBehaviour
 {
+	public string playerName;
+	public DialogueGameHandler gameHandler;
+
     public int primeInt = 1; // This integer drives game progress!
     public Text Char1name;
     public Text Char1speech;
@@ -36,6 +39,9 @@ public class DialogueScene1 : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+
+	string playerNameTemp = gameHandler.GetName();
+	playerName = playerNameTemp.ToUpper();
     }
 
     void Update()
@@ -60,7 +66,7 @@ public class DialogueScene1 : MonoBehaviour
         {
 
             dialogue.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "*SIGH* Finally! I’m home...";
             Char2name.text = "";
             Char2speech.text = "";

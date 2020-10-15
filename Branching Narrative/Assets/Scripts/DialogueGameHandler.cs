@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class DialogueGameHandler : MonoBehaviour
 {
 
+	public static string playerName = "YOU";
+
     public static int playerStat;
-    //public GameObjectÂ textGameObject;
+    //public GameObject textGameObject;
 
     //voidÂ Start () { UpdateScore (); }
 
@@ -39,4 +41,14 @@ public class DialogueGameHandler : MonoBehaviour
     {
         Application.Quit();
     }
+
+	public void UpdateName(string newName){
+		playerName = newName;
+		Debug.Log("name changed to " + playerName);
+	}
+
+	public string GetName(){
+		return playerName;
+	}
+
 }
