@@ -18,7 +18,7 @@ public class DialogueScene4c : MonoBehaviour
     public GameObject ArtChar1;
     public GameObject ArtBG1;
     public GameObject Choice3;
-    public GameObject Choice6;
+    public GameObject Choice5;
     public GameObject NextScene1Button;
     public GameObject NextScene2Button;
     public GameObject nextButton;
@@ -32,7 +32,7 @@ public class DialogueScene4c : MonoBehaviour
         ArtChar1.SetActive(false);
         ArtBG1.SetActive(true);
         Choice3.SetActive(false);
-        Choice6.SetActive(false);
+        Choice5.SetActive(false);
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
@@ -119,7 +119,7 @@ public class DialogueScene4c : MonoBehaviour
             nextButton.SetActive(false);
             allowSpace = false;
             Choice3.SetActive(true); // function Choice1aFunct()
-            Choice6.SetActive(true); // function Choice1bFunct()
+            Choice5.SetActive(true); // function Choice1bFunct()
         }
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
@@ -173,7 +173,7 @@ public class DialogueScene4c : MonoBehaviour
         Char2speech.text = "";
         primeInt = 99;
         Choice3.SetActive(false);
-        Choice6.SetActive(false);
+        Choice5.SetActive(false);
         nextButton.SetActive(true);
         allowSpace = true;
     }
@@ -186,7 +186,7 @@ public class DialogueScene4c : MonoBehaviour
         Char2speech.text = "";
         primeInt = 199;
         Choice3.SetActive(false);
-        Choice6.SetActive(false);
+        Choice5.SetActive(false);
         nextButton.SetActive(true);
         allowSpace = true;
     }
