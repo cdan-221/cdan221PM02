@@ -137,7 +137,7 @@ public class DialogueScene9a : MonoBehaviour
         else if (primeInt == 101)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "*Heavy breathing*  I am awake... \n It looked so real!";
+            Char1speech.text = "*Heavy breathing*  I am awake... \nIt looked so real!";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -158,7 +158,7 @@ public class DialogueScene9a : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "You hurt my feelings, very bad! \n Now now... \n You have to be punished!";
+            Char2speech.text = "You hurt my feelings, very bad! \nNow now... \nYou have to be punished!";
         }
 
         else if (primeInt == 201)
@@ -177,7 +177,7 @@ public class DialogueScene9a : MonoBehaviour
     public void Choice10aFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "(No way! This is just my imagination! If I ... if I struggle enough, I might wake up!) \n *struggle* *struggle*";
+        Char1speech.text = "(No way! This is just my imagination! If I ... if I struggle enough, I might wake up!) \n*struggle* *struggle*";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 99;

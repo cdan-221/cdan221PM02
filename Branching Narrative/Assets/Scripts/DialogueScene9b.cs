@@ -143,7 +143,7 @@ public class DialogueScene9b : MonoBehaviour
         else if (primeInt ==101)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "I...it was sleep paralysis... \n I'm awake, it was just the dream...";
+            Char1speech.text = "I...it was sleep paralysis... \nI'm awake, it was just the dream...";
             Char2name.text = "";
             Char2speech.text = "";
             nextButton.SetActive(false);
