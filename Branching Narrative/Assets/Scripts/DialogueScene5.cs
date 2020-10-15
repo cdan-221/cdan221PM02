@@ -117,24 +117,24 @@ public class DialogueScene5 : MonoBehaviour
             Char2speech.text = "Are you sure you wanna risk it?";
         }
         else if (primeInt == 10) {
-            Char1name.text = "JIMMY";
-            Char1speech.text = "Your mom is terrifying when she catches you, she's like a demon.";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "JIMMY";
+            Char2speech.text = "Your mom is terrifying when she catches you, she's like a demon.";
         }
         else if (primeInt == 11)
         { 
-            Char1name.text = "";
-            Char1speech.text = "";
-            Char2name.text = "YOU";
-            Char2speech.text = "Aren't you the one who convinced me to play?";
+            Char1name.text = "YOU";
+            Char1speech.text = "Aren't you the one who convinced me to play?";
+            Char2name.text = "";
+            Char2speech.text = "";
         }
         else if (primeInt == 12)
         {
-            Char1name.text = "JIMMY";
-            Char1speech.text = "Yea but now I kinda have a bad feeling about this.";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "JIMMY";
+            Char2speech.text = "Yea but now I kinda have a bad feeling about this.";
             // Turn off "Next" button, turn on "Choice" buttons
             nextButton.SetActive(false);
             allowSpace = false;
@@ -144,10 +144,10 @@ public class DialogueScene5 : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            Char1name.text = "JIMMY";
-            Char1speech.text = "Don't blame me if you get caught.";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "JIMMY";
+            Char2speech.text = "Don't blame me if you get caught.";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
@@ -165,10 +165,10 @@ public class DialogueScene5 : MonoBehaviour
 
         else if (primeInt == 200)
         {
-            Char1name.text = "JIMMY";
-            Char1speech.text = "Alright, cya man.";
-            Char2name.text = "";
-            Char2speech.text = "";
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "JIMMY";
+            Char2speech.text = "Alright, cya man.";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -188,10 +188,10 @@ public class DialogueScene5 : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
     public void Choice1aFunct()
     {
-        Char1name.text = "";
-        Char1speech.text = "";
-        Char2name.text = "YOU";
-        Char2speech.text = "Don't be such a killjoy, shut up and play.";
+        Char1name.text = "YOU";
+        Char1speech.text = "Don't be such a killjoy, shut up and play.";
+        Char2name.text = "";
+        Char2speech.text = "";
         primeInt = 99;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -200,10 +200,10 @@ public class DialogueScene5 : MonoBehaviour
     }
     public void Choice1bFunct()
     {
-        Char1name.text = "";
-        Char1speech.text = "";
-        Char2name.text = "YOU";
-        Char2speech.text = "You know what, you're right. I should probably go.";
+        Char1name.text = "YOU";
+        Char1speech.text = "You know what, you're right. I should probably go.";
+        Char2name.text = "";
+        Char2speech.text = "";
         primeInt = 199;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
