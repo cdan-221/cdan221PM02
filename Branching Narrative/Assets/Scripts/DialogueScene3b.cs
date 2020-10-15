@@ -145,7 +145,7 @@ public class DialogueScene3b : MonoBehaviour
         else if (primeInt == 100)
         {
             Char1name.text = "";
-            Char1speech.text = "*";
+            Char1speech.text = "";
             Char2name.text = "MOM";
             Char2speech.text = "Thank you, honey!";
             nextButton.SetActive(false);
