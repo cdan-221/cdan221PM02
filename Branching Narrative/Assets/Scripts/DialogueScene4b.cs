@@ -176,7 +176,7 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(10f);
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "???";
-            Char3speech.text = ". .   . \n.        .   . . . . \n..          .   ...    .";
+            Char3speech.text = ". . HAhA  . \n.        .   hAHaHA. . . . \n..          .   ...    .";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
