@@ -80,6 +80,7 @@ public class DialogueScene9a : MonoBehaviour
         }
         else if (primeInt == 4)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
             StartCoroutine(FadeIn(ArtChar2));
             ArtChar1.SetActive(false);
             ArtChar2.SetActive(true);
@@ -94,7 +95,7 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "Didn't your mom teach you to answer the question?";
+            Char2speech.text = "You should always  answer the question!";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 6)
@@ -106,7 +107,7 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
         }
         else if (primeInt == 7)
         {
-Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
+Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(1f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
@@ -114,11 +115,11 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
         }
         else if (primeInt == 8)
         {
-Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
+Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(7f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "We could have best friend! But, your rudeness changes everthing!";
+            Char2speech.text = "We could have BEST FRIEND! But, your RUDENESS changes everthing!";
             // Turn off "Next" button, turn on "Choice" buttons
             nextButton.SetActive(false);
             allowSpace = false;
@@ -158,18 +159,44 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
 
         else if (primeInt == 200)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "You hurt my feelings, very bad! \nNow now... \nYou have to be punished!";
+            Char2speech.text = "You hurt my feelings, very bad!";
         }
-
         else if (primeInt == 201)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "Huh... Even your little nightlight can't save you now! \n YOU ARE MINE!";
+            Char2speech.text = "Now now...";
+        }
+        else if (primeInt == 202)
+        {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(7f);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "DEMON";
+            Char2speech.text = "You have to be punished!";
+        }
+        else if (primeInt == 203)
+        {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(3f);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "DEMON";
+            Char2speech.text = "Huh... Even your little nightlight can't save you now!";
+        }
+
+        else if (primeInt == 204)
+        {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(10f);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "DEMON";
+            Char2speech.text = "YOU ARE MINE!";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);

@@ -31,7 +31,7 @@ public class DialogueScene9b : MonoBehaviour
     void Start()
     {         // initial visibility settings
         dialogue.SetActive(false);
-        ArtChar1.SetActive(false);
+        ArtChar1.SetActive(true);
         ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
         ArtBG2.SetActive(false);
@@ -80,7 +80,9 @@ public class DialogueScene9b : MonoBehaviour
         }
         else if (primeInt == 4)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(1f);
             ArtChar1.SetActive(false);
+            StartCoroutine(FadeIn(ArtChar2));
             ArtChar2.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
@@ -89,34 +91,46 @@ public class DialogueScene9b : MonoBehaviour
         }
         else if (primeInt == 5)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "Come on... Let's be friend.";
+            Char2speech.text = "Come on...";
             //gameHandler.AddPlayerStat(1);
         }
-        else if (primeInt == 6)
+        else if (primeInt ==6)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(8f);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "DEMON";
+            Char2speech.text = "Let's be friend.";
+        }
+        else if (primeInt == 7)
+        {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
             Char2speech.text = "Are you still scared?";
         }
-        else if (primeInt == 7)
+        else if (primeInt == 8)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(1f);
             Char1name.text = "YOU";
             Char1speech.text = "(*Sob* This is not real.)";
             Char2name.text = "";
             Char2speech.text = "";
         }
-        else if (primeInt == 8)
+        else if (primeInt == 9)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(1f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
             Char2speech.text = "Awww... Are you a cry baby?";
         }
-        else if (primeInt == 9)
+        else if (primeInt == 10)
         {
             Char1name.text = "";
             Char1speech.text = "";
@@ -131,7 +145,7 @@ public class DialogueScene9b : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            ArtChar2.SetActive(false);
+            StartCoroutine(FadeOut(ArtChar2));
             ArtBG2.SetActive(true);
             ArtBG1.SetActive(false);
             Char1name.text = "YOU";
@@ -153,10 +167,19 @@ public class DialogueScene9b : MonoBehaviour
 
         else if (primeInt == 200)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(10f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "Haha, you really did entertained me! You should have go to bed early!";
+            Char2speech.text = "HaHaHaHa...";
+        }
+        else if (primeInt == 201)
+        {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "DEMON";
+            Char2speech.text = "You really did entertain me! You should have go to bed early!";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -196,5 +219,30 @@ public class DialogueScene9b : MonoBehaviour
     public void SceneChange10b()
     {
         SceneManager.LoadScene("End_Lose");
+    }
+    IEnumerator FadeIn(GameObject fadeImage)
+    {
+        float alphaLevel = 0;
+        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+        for (int i = 0; i < 100; i++)
+        {
+            alphaLevel += 0.01f;
+            yield return null;
+            fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+            Debug.Log("Alpha is: " + alphaLevel);
+        }
+    }
+
+    IEnumerator FadeOut(GameObject fadeImage)
+    {
+        float alphaLevel = 1;
+        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+        for (int i = 0; i < 100; i++)
+        {
+            alphaLevel -= 0.01f;
+            yield return null;
+            fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+            Debug.Log("Alpha is: " + alphaLevel);
+        }
     }
 }

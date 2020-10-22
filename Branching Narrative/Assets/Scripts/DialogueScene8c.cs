@@ -84,32 +84,56 @@ public class DialogueScene8c : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "Don't worry. I don't bite.";
+            Char2speech.text = "Don't worry.";
         }
         else if (primeInt == 5)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(true);
+            StartCoroutine(FadeIn(ArtChar2));
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "DEMON";
+            Char2speech.text = "I don't bite.";
+        }
+        else if (primeInt == 6)
+        {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(0f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
             Char2speech.text = "I just want to be friend.";
             //gameHandler.AddPlayerStat(1);
         }
-        else if (primeInt == 6)
+        else if (primeInt == 7)
         {
             Char1name.text = "YOU";
             Char1speech.text = "(W...What? A friend... with demon?)";
             Char2name.text = "";
             Char2speech.text = "";
         }
-        else if (primeInt == 7)
+        else if (primeInt == 8)
         {
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "...Oh, yes. Just a friend, like your little friend Jimmy!";
+            Char2speech.text = "...Oh, yes. Just a friend.";
         }
-        else if (primeInt == 8)
+        else if (primeInt == 9)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(3f);
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(true);
+            StartCoroutine(FadeIn(ArtChar2));
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "DEMON";
+            Char2speech.text = "like your little friend JIMMY!";
+        }
+        else if (primeInt == 10)
+        {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(1f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";

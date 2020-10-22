@@ -368,6 +368,7 @@ GameObject:
   - component: {fileID: 253079826}
   - component: {fileID: 253079827}
   - component: {fileID: 253079828}
+  - component: {fileID: 253079829}
   m_Layer: 5
   m_Name: TextChar2Speech
   m_TagString: Untagged
@@ -435,6 +436,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Char2 Speech
+--- !u!114 &253079829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253079825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7c6ab076074964598963bd50e0b969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmount: 2
 --- !u!1 &299890104
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,6 +841,7 @@ GameObject:
   - component: {fileID: 1079970891}
   - component: {fileID: 1079970893}
   - component: {fileID: 1079970892}
+  - component: {fileID: 1079970894}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -866,7 +881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.85882354, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -885,7 +900,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Give Up
+  m_Text: Sleep Paralysis
 --- !u!222 &1079970893
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -894,6 +909,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079970890}
   m_CullTransparentMesh: 0
+--- !u!114 &1079970894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079970890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7c6ab076074964598963bd50e0b969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmount: 3
 --- !u!1 &1138024266
 GameObject:
   m_ObjectHideFlags: 0
