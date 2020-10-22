@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class DialogueScene5Lose : MonoBehaviour {
+        public string playerName;
+	public DialogueGameHandler gameHandler;
+
         public int primeInt = 1; // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -34,7 +37,10 @@ void Start(){         // initial visibility settings
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
-   }
+
+	string playerNameTemp = gameHandler.GetName();
+	playerName = playerNameTemp.ToUpper();
+    }
 
 void Update(){         // use spacebar as Next button
         if (allowSpace == true){
@@ -52,26 +58,26 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                ArtChar1.SetActive(false);
                 dialogue.SetActive(true);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "Oh man, I stayed up way too late. "));
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, ".........."));
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "I'm so tired.... I can't even move. "));
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 5){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "Wait a minute, I can't move at all! "));
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -94,7 +100,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 100){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "I should have just gone to bed earlier.. "));
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -103,7 +109,7 @@ public void talking(){         // main story function. Players hit next to progr
             NextScene1Button.SetActive(true);
         }
        else if (primeInt == 200){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "This isn't happening!! "));
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -115,7 +121,7 @@ public void talking(){         // main story function. Players hit next to progr
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
         StartCoroutine(TypeText(Char1speech, "I should have just gone to bed earlier.. "));
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -126,7 +132,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
         StartCoroutine(TypeText(Char1speech, "This isn't happening!! "));
                 Char2name.text = "";
                 Char2speech.text = "";

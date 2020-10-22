@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 
 public class DialogueScene9b : MonoBehaviour
 {
+    public string playerName;
+	public DialogueGameHandler gameHandler;
+
     public int primeInt = 1; // This integer drives game progress!
     public Text Char1name;
     public Text Char1speech;
@@ -40,6 +43,9 @@ public class DialogueScene9b : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+
+	    string playerNameTemp = gameHandler.GetName();
+	    playerName = playerNameTemp.ToUpper();
     }
 
     void Update()
@@ -65,15 +71,15 @@ public class DialogueScene9b : MonoBehaviour
             ArtChar1.SetActive(true);
             ArtChar2.SetActive(false);
             dialogue.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "(Why I can't move?)";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 3)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "(Why my body doesn't respond?)";
+            Char1name.text = playerName;
+            Char1speech.text = "(Why doesn't my body respond?)";
             Char2name.text = "";
             Char2speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -87,7 +93,7 @@ public class DialogueScene9b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "You know, I'm still waiting. Right?";
+            Char2speech.text = "You know I'm still waiting. Right?";
         }
         else if (primeInt == 5)
         {
@@ -104,7 +110,7 @@ public class DialogueScene9b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "Let's be friend.";
+            Char2speech.text = "Let's be friends.";
         }
         else if (primeInt == 7)
         {
@@ -117,7 +123,7 @@ public class DialogueScene9b : MonoBehaviour
         else if (primeInt == 8)
         {
             Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(1f);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "(*Sob* This is not real.)";
             Char2name.text = "";
             Char2speech.text = "";
@@ -148,7 +154,7 @@ public class DialogueScene9b : MonoBehaviour
             StartCoroutine(FadeOut(ArtChar2));
             ArtBG2.SetActive(true);
             ArtBG1.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "NO!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -156,8 +162,8 @@ public class DialogueScene9b : MonoBehaviour
 
         else if (primeInt ==101)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "I...it was sleep paralysis... \nI'm awake, it was just the dream...";
+            Char1name.text = playerName;
+            Char1speech.text = "I...It was sleep paralysis... \nI'm awake, it was just the dream...";
             Char2name.text = "";
             Char2speech.text = "";
             nextButton.SetActive(false);
@@ -179,7 +185,7 @@ public class DialogueScene9b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "You really did entertain me! You should have go to bed early!";
+            Char2speech.text = "You really did entertain me! You should have gone to bed early!";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -189,7 +195,7 @@ public class DialogueScene9b : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
     public void Choice10aFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "(I have to wake up! I have to push it away!)";
         Char2name.text = "";
         Char2speech.text = "";
@@ -201,7 +207,7 @@ public class DialogueScene9b : MonoBehaviour
     }
     public void Choice10bFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "(This is not real... not real... real...)";
         Char2name.text = "";
         Char2speech.text = "";

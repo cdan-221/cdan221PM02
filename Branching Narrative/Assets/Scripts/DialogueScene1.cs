@@ -40,8 +40,8 @@ public class DialogueScene1 : MonoBehaviour
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
 
-	string playerNameTemp = gameHandler.GetName();
-	playerName = playerNameTemp.ToUpper();
+	    string playerNameTemp = gameHandler.GetName();
+	    playerName = playerNameTemp.ToUpper();
     }
 
     void Update()
@@ -87,7 +87,7 @@ public class DialogueScene1 : MonoBehaviour
         }
         else if (primeInt == 4)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Is there anything left for dinner?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -105,7 +105,7 @@ public class DialogueScene1 : MonoBehaviour
         }
         else if (primeInt == 6)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh...nevermind then.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -118,7 +118,7 @@ public class DialogueScene1 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "MOM";
-            Char2speech.text = "Well I'm going to be in the kitchen, let me know if you need anything. Also don't stay up too late its already 8pm.";
+            Char2speech.text = "Well I'm going to be in the kitchen, let me know if you need anything. Also don't stay up too late, it's already 8pm.";
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -134,7 +134,7 @@ public class DialogueScene1 : MonoBehaviour
         }
         else if (primeInt == 8)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Huh? Oh a text!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -149,8 +149,8 @@ public class DialogueScene1 : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "I guess, I'm just gonna go to my bedroom";
+            Char1name.text = playerName;
+            Char1speech.text = "I guess I'm just gonna go to my bedroom.";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -162,7 +162,7 @@ public class DialogueScene1 : MonoBehaviour
 
         else if (primeInt == 200)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "My friends are asking me to play games, I guess a couple of games won't hurt.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -177,7 +177,7 @@ public class DialogueScene1 : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
     public void Choice1aFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "I should be smart about this.";
         Char2name.text = "";
         Char2speech.text = "";
@@ -191,7 +191,7 @@ public class DialogueScene1 : MonoBehaviour
     }
     public void Choice1bFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Just checking the text can't hurt.";
         Char2name.text = "";
         Char2speech.text = "";

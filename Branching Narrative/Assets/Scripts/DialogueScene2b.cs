@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 
 public class DialogueScene2b : MonoBehaviour
 {
+    public string playerName;
+	public DialogueGameHandler gameHandler;
+
     public int primeInt = 1; // This integer drives game progress!
     public Text Char1name;
     public Text Char1speech;
@@ -40,6 +43,9 @@ public class DialogueScene2b : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+
+        string playerNameTemp = gameHandler.GetName();
+	    playerName = playerNameTemp.ToUpper();
     }
 
     void Update()
@@ -73,7 +79,7 @@ public class DialogueScene2b : MonoBehaviour
         }
         else if (primeInt == 3)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "Hey, the Jimster05!! ;) "));
             Char2name.text = "";
             Char2speech.text = "";
@@ -91,8 +97,8 @@ public class DialogueScene2b : MonoBehaviour
         }
         else if (primeInt == 5)
         {
-            Char1name.text = "YOU";
-            StartCoroutine(TypeText(Char1speech, "Let's play couple games of Anti-Attack! "));
+            Char1name.text = playerName;
+            StartCoroutine(TypeText(Char1speech, "Let's play a couple games of Anti-Attack! "));
             Char2name.text = "";
             Char2speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -109,8 +115,8 @@ public class DialogueScene2b : MonoBehaviour
         }
         else if (primeInt == 7)
         {
-            Char1name.text = "YOU";
-            StartCoroutine(TypeText(Char1speech, "Haven’t play in a while, go easy on me... "));
+            Char1name.text = playerName;
+            StartCoroutine(TypeText(Char1speech, "Haven’t played in a while, go easy on me... "));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -122,7 +128,7 @@ public class DialogueScene2b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            StartCoroutine(TypeText(Char2speech, "Bruh, you pull your weight, I ain’t gonna carry your *ss! "));
+            StartCoroutine(TypeText(Char2speech, "Bruh, you pull your weight, I ain’t gonna carry your @$$! "));
         }
         else if (primeInt == 9)
         {
@@ -139,7 +145,7 @@ public class DialogueScene2b : MonoBehaviour
             ArtChar1.SetActive(false);
             ArtChar2.SetActive(true);
             ArtChar3.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "I'm done with this game... "));
             Char2name.text = "";
             Char2speech.text = "";
@@ -156,7 +162,7 @@ public class DialogueScene2b : MonoBehaviour
         }
         else if (primeInt == 12)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "I'm not sure, I got work tomorrow morning. "));
             Char2name.text = "";
             Char2speech.text = "";
@@ -169,7 +175,7 @@ public class DialogueScene2b : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Bed, here I come! ";
             Char2name.text = "";
             Char2speech.text = "";
@@ -196,7 +202,7 @@ public class DialogueScene2b : MonoBehaviour
         ArtChar1.SetActive(false);
         ArtChar2.SetActive(true);
         ArtChar3.SetActive(false);
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         StartCoroutine(TypeText(Char1speech, "I should go to bed, Jimmy. Cya! "));
         Char2name.text = "";
         Char2speech.text = "";
@@ -211,8 +217,8 @@ public class DialogueScene2b : MonoBehaviour
         ArtChar1.SetActive(false);
         ArtChar2.SetActive(true);
         ArtChar3.SetActive(false);
-        Char1name.text = "YOU";
-        StartCoroutine(TypeText(Char1speech, "...Okay! Let's do few more rounds in different game!! "));
+        Char1name.text = playerName;
+        StartCoroutine(TypeText(Char1speech, "...Okay! Let's do a few more rounds in a different game!! "));
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 199;

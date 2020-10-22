@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 
 public class DialogueScene4b : MonoBehaviour
 {
+    public string playerName;
+	public DialogueGameHandler gameHandler;
+
     public int primeInt = 1; // This integer drives game progress!
     public Text Char1name;
     public Text Char1speech;
@@ -38,6 +41,9 @@ public class DialogueScene4b : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+
+	    string playerNameTemp = gameHandler.GetName();
+	    playerName = playerNameTemp.ToUpper();
     }
 
     void Update()
@@ -62,7 +68,7 @@ public class DialogueScene4b : MonoBehaviour
         {
             ArtChar1.SetActive(false);
             dialogue.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Let's see...";
             Char2name.text = "";
             Char2speech.text = "";
@@ -83,7 +89,7 @@ public class DialogueScene4b : MonoBehaviour
         else if (primeInt == 4)
         {
             ArtChar1.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "Yes? " ));
             Char2name.text = "";
             Char2speech.text = "";
@@ -114,7 +120,7 @@ public class DialogueScene4b : MonoBehaviour
         else if (primeInt == 7)
         {
             ArtChar1.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Hmm...";
             Char2name.text = "";
             Char2speech.text = "";
@@ -153,7 +159,7 @@ public class DialogueScene4b : MonoBehaviour
         else if (primeInt == 11)
         {
             ArtChar1.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "What's taking him so long?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -184,7 +190,7 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(10f);
         
         else if (primeInt == 200)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I think I'll play Anti-Attack again.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -200,7 +206,7 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(10f);
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
     public void Choice1aFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "I'll just wait a bit more...";
         Char2name.text = "";
         Char2speech.text = "";
@@ -214,7 +220,7 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(10f);
     }
     public void Choice1bFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Argh! Whatever! I can't sleep AND I'm not going to wait for them to answer. I'll just go play!";
         Char2name.text = "";
         Char2speech.text = "";

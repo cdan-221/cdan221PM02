@@ -5,7 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class DialogueScene4a : MonoBehaviour {
+public class DialogueScene4a : MonoBehaviour 
+{
+        public string playerName;
+	public DialogueGameHandler gameHandler;
+
         public int primeInt = 1; // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -34,7 +38,10 @@ void Start(){         // initial visibility settings
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
-   }
+
+	string playerNameTemp = gameHandler.GetName();
+	playerName = playerNameTemp.ToUpper();
+    }
 
 void Update(){         // use spacebar as Next button
         if (allowSpace == true){
@@ -52,63 +59,63 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                ArtChar1.SetActive(false);
                 dialogue.SetActive(true);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Time to drift off to the dream world. This shouldn’t be too hard.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "I really can’t believe the day I had today.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Sheila’s comment, my mom throwing out my comic books…";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 5){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "I really hope tomorrow’s going to be better.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = ".... Maybe it won’t be. But at least it’s a new day.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==7){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "How can I fall asleep quickly....";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 8){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Oh I know! I can count sheep.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
         else if (primeInt == 9){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "1.....";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
         else if (primeInt == 10){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "2........";
                 Char2name.text = "";
                 Char2speech.text = "";        
         }
         else if (primeInt == 11){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "....3......";
                 Char2name.text = "";
                 Char2speech.text = "";        
@@ -149,7 +156,7 @@ public void talking(){         // main story function. Players hit next to progr
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Huh? A text? I wonder who's up this late.";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -160,7 +167,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "zzzzzzZZZZZZZZzzzzzz...";
                 Char2name.text = "";
                 Char2speech.text = "";

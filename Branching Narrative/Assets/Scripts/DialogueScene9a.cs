@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 
 public class DialogueScene9a : MonoBehaviour
 {
+    public string playerName;
+	public DialogueGameHandler gameHandler;
+
     public int primeInt = 1; // This integer drives game progress!
     public Text Char1name;
     public Text Char1speech;
@@ -40,6 +43,9 @@ public class DialogueScene9a : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+
+	    string playerNameTemp = gameHandler.GetName();
+	    playerName = playerNameTemp.ToUpper();
     }
 
     void Update()
@@ -65,14 +71,14 @@ public class DialogueScene9a : MonoBehaviour
             ArtChar1.SetActive(true);
             ArtChar2.SetActive(false);
             dialogue.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "(Mom! Mooom!)";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 3)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "(P...please... hear me mom!)";
             Char2name.text = "";
             Char2speech.text = "";
@@ -95,12 +101,12 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "You should always  answer the question!";
+            Char2speech.text = "You should always answer my questions!";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 6)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "(Why I can't talk?)";
             Char2name.text = "";
             Char2speech.text = "";
@@ -119,7 +125,7 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(7f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "We could have BEST FRIEND! But, your RUDENESS changes everthing!";
+            Char2speech.text = "We could have been BEST FRIENDS! But, your RUDENESS changes everthing!";
             // Turn off "Next" button, turn on "Choice" buttons
             nextButton.SetActive(false);
             allowSpace = false;
@@ -132,7 +138,7 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(7f);
             StartCoroutine(FadeOut(ArtChar1));
             ArtBG2.SetActive(true);
             ArtBG1.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Ahhh!!!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -140,7 +146,7 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(7f);
 
         else if (primeInt == 101)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "*Heavy breathing*  I am awake... \nIt looked so real!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -148,7 +154,7 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(7f);
 
         else if (primeInt == 102)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "It was just a dream... I should sleep with my nightlight on.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -187,7 +193,7 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(7f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "Huh... Even your little nightlight can't save you now!";
+            Char2speech.text = "Hah... Even your little nightlight can't save you now!";
         }
 
         else if (primeInt == 204)
@@ -206,8 +212,8 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(7f);
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
     public void Choice10aFunct()
     {
-        Char1name.text = "YOU";
-        Char1speech.text = "(No way! This is just my imagination! If I ... if I struggle enough, I might wake up!) \n*struggle* *struggle*";
+        Char1name.text = playerName;
+        Char1speech.text = "(No way! This is just my imagination! If I ... If I struggle enough, I might wake up!) \n*struggle* *struggle*";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 99;
@@ -218,7 +224,7 @@ Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(7f);
     }
     public void Choice10bFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "(There is nothing I can do...)";
         Char2name.text = "";
         Char2speech.text = "";

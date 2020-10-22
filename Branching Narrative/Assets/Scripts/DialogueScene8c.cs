@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class DialogueScene8c : MonoBehaviour
-{
+{    
+    public string playerName;
+	public DialogueGameHandler gameHandler;
+
     public int primeInt = 1; // This integer drives game progress!
     public Text Char1name;
     public Text Char1speech;
@@ -38,6 +41,9 @@ public class DialogueScene8c : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+
+	    string playerNameTemp = gameHandler.GetName();
+	    playerName = playerNameTemp.ToUpper();
     }
 
     void Update()
@@ -63,7 +69,7 @@ public class DialogueScene8c : MonoBehaviour
             ArtChar1.SetActive(true);
             ArtChar2.SetActive(false);
             dialogue.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "(W...Wha...What the hell?!)";
             Char2name.text = "";
             Char2speech.text = "";
@@ -103,13 +109,13 @@ public class DialogueScene8c : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "I just want to be friend.";
+            Char2speech.text = "I just want to be a friend.";
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 7)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "(W...What? A friend... with demon?)";
+            Char1name.text = playerName;
+            Char1speech.text = "(W...What? A friend... with a demon?)";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -137,7 +143,7 @@ public class DialogueScene8c : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
-            Char2speech.text = "Wouldn't be so cool, hmm?";
+            Char2speech.text = "Wouldn't that be so cool, hmm?";
             // Turn off "Next" button, turn on "Choice" buttons
             nextButton.SetActive(false);
             allowSpace = false;
@@ -147,7 +153,7 @@ public class DialogueScene8c : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "(I have to call my mom!)";
             Char2name.text = "";
             Char2speech.text = "";
@@ -158,7 +164,7 @@ public class DialogueScene8c : MonoBehaviour
 
         else if (primeInt == 200)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "(I have to leave the bed... I have to run!)";
             Char2name.text = "";
             Char2speech.text = "";
@@ -171,7 +177,7 @@ public class DialogueScene8c : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
     public void Choice9aFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "(N...No! This is just a dream!)";
         Char2name.text = "";
         Char2speech.text = "";
@@ -183,8 +189,8 @@ public class DialogueScene8c : MonoBehaviour
     }
     public void Choice9bFunct()
     {
-        Char1name.text = "YOU";
-        Char1speech.text = "(N...No! This can't be real! A Demon?!)";
+        Char1name.text = playerName;
+        Char1speech.text = "(N...No! This can't be real! A demon?!)";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 199;

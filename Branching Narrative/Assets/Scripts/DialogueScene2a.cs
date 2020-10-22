@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 
 public class DialogueScene2a : MonoBehaviour
 {
+    public string playerName;
+	public DialogueGameHandler gameHandler;
+
     public int primeInt = 1; // This integer drives game progress!
     public Text Char1name;
     public Text Char1speech;
@@ -36,6 +39,9 @@ public class DialogueScene2a : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+
+        string playerNameTemp = gameHandler.GetName();
+	    playerName = playerNameTemp.ToUpper();
     }
 
     void Update()
@@ -60,14 +66,14 @@ public class DialogueScene2a : MonoBehaviour
         {
             ArtChar1.SetActive(false);
             dialogue.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I should change my clothes...";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 3)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "...I’m not sure if I want to sleep yet.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -75,14 +81,14 @@ public class DialogueScene2a : MonoBehaviour
         }
         else if (primeInt == 4)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Maybe I should do something.";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 5)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "...";
             Char2name.text = "";
             Char2speech.text = "";
@@ -92,7 +98,7 @@ public class DialogueScene2a : MonoBehaviour
         {
             StartCoroutine(FadeIn(ArtChar1));
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Mom, where are my comic books?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -107,7 +113,7 @@ public class DialogueScene2a : MonoBehaviour
         else if (primeInt == 8)
         {
             StartCoroutine(FadeOut(ArtChar1));
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "*Sigh* She will never get it…";
             Char2name.text = "";
             Char2speech.text = "";
@@ -120,7 +126,7 @@ public class DialogueScene2a : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Bed, here I come!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -131,7 +137,7 @@ public class DialogueScene2a : MonoBehaviour
 
         else if (primeInt == 200)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I guess, I can check the computer.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -144,7 +150,7 @@ public class DialogueScene2a : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
     public void Choice3Funct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Well… I should just get in bed then.";
         Char2name.text = "";
         Char2speech.text = "";
@@ -156,7 +162,7 @@ public class DialogueScene2a : MonoBehaviour
     }
     public void Choice2bFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "It really doesn't hurt to spent a little bit more time!";
         Char2name.text = "";
         Char2speech.text = "";

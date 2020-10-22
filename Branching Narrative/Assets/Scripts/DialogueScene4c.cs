@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 
 public class DialogueScene4c : MonoBehaviour
 {
+    public string playerName;
+	public DialogueGameHandler gameHandler;
+
     public int primeInt = 1; // This integer drives game progress!
     public Text Char1name;
     public Text Char1speech;
@@ -36,6 +39,9 @@ public class DialogueScene4c : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+
+	    string playerNameTemp = gameHandler.GetName();
+	    playerName = playerNameTemp.ToUpper();
     }
 
     void Update()
@@ -60,14 +66,14 @@ public class DialogueScene4c : MonoBehaviour
         {
             ArtChar1.SetActive(false);
             dialogue.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I don't know how I'm gonna find the flash light in this mess!";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 3)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Also, it is super dark in here...";
             Char2name.text = "";
             Char2speech.text = "";
@@ -75,14 +81,14 @@ public class DialogueScene4c : MonoBehaviour
         }
         else if (primeInt == 4)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "Did she even tell me where it is in basement?";
+            Char1name.text = playerName;
+            Char1speech.text = "Did she even tell me where it is in the basement?";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 5)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "...";
             Char2name.text = "";
             Char2speech.text = "";
@@ -90,28 +96,28 @@ public class DialogueScene4c : MonoBehaviour
         }
         else if (primeInt == 6)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "...\n...";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 7)
         {
-            Char1name.text = "YOU";
-            Char1speech.text = "*Sight* I can't find it anywhere...";
+            Char1name.text = playerName;
+            Char1speech.text = "*Sigh* I can't find it anywhere...";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 8)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Should I search more?";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 9)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Nah... There is no point of searching more... Right?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -124,7 +130,7 @@ public class DialogueScene4c : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I'm going to bed, mom!!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -145,7 +151,7 @@ public class DialogueScene4c : MonoBehaviour
 
         else if (primeInt == 201)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Wha... What the hell?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -178,7 +184,7 @@ public class DialogueScene4c : MonoBehaviour
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
     public void Choice3Funct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "MOOOOMMM!!!\nI couldn't find it!!";
         Char2name.text = "";
         Char2speech.text = "";
@@ -191,8 +197,8 @@ public class DialogueScene4c : MonoBehaviour
     public void Choice5Funct()
     {
         ArtChar1.SetActive(false);
-        Char1name.text = "YOU";
-        Char1speech.text = "*Sight* It wouldn't hurt to look a little bit more.";
+        Char1name.text = playerName;
+        Char1speech.text = "*Sigh* It wouldn't hurt to look a little bit more.";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 199;

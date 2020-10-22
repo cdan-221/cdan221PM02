@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 
 public class DialogueScene6 : MonoBehaviour
 {
+    public string playerName;
+	public DialogueGameHandler gameHandler;
+
     public int primeInt = 1; // This integer drives game progress!
     public Text Char1name;
     public Text Char1speech;
@@ -42,6 +45,9 @@ public class DialogueScene6 : MonoBehaviour
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+
+	    string playerNameTemp = gameHandler.GetName();
+	    playerName = playerNameTemp.ToUpper();
     }
 
     void Update()
@@ -65,7 +71,7 @@ public class DialogueScene6 : MonoBehaviour
         else if (primeInt == 2)
         {
             dialogue.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "You were right Jimmy, a few more games wouldn't hurt! " ));
             Char2name.text = "";
             Char2speech.text = "";
@@ -85,7 +91,7 @@ public class DialogueScene6 : MonoBehaviour
         }
         else if (primeInt == 4)
         {
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             StartCoroutine(TypeText(Char1speech, "Ok, lets keep going then! " ));
             Char2name.text = "";
             Char2speech.text = "";
@@ -116,8 +122,8 @@ public class DialogueScene6 : MonoBehaviour
         }
         else if (primeInt == 6)
         {
-            Char1name.text = "YOU";
-            StartCoroutine(TypeText(Char1speech, "Oh no, that's my mom she found out. " ));
+            Char1name.text = playerName;
+            StartCoroutine(TypeText(Char1speech, "Oh no, that's my mom, she found out. " ));
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -137,7 +143,7 @@ public class DialogueScene6 : MonoBehaviour
         else if (primeInt == 8)
         {
             ArtChar4.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Huh? How am I going to run from this??";
             Char2name.text = "";
             Char2speech.text = "";
@@ -178,7 +184,7 @@ public class DialogueScene6 : MonoBehaviour
         else if (primeInt == 200)
         {
             StartCoroutine(FadeOut(ArtChar2));
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Yes, mom...";
             Char2name.text = "";
             Char2speech.text = "";
@@ -194,7 +200,7 @@ public class DialogueScene6 : MonoBehaviour
     public void Choice1aFunct()
     {
         
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "No! I don't want to!!";
         Char2name.text = "";
         Char2speech.text = "";
@@ -209,7 +215,7 @@ public class DialogueScene6 : MonoBehaviour
     }
     public void Choice1bFunct()
     {
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "*Sigh*";
         Char2name.text = "";
         Char2speech.text = "";
