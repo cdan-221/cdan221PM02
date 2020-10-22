@@ -70,7 +70,7 @@ public class DialogueScene5 : MonoBehaviour
             ArtChar4.SetActive(false);
             dialogue.SetActive(true);
             Char1name.text = "YOU";
-            Char1speech.text = "Hey, Jimmy, are you still there?";
+            StartCoroutine(TypeText(Char1speech, "Hey, Jimmy, are you still there? "));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -83,13 +83,13 @@ public class DialogueScene5 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Yea I'm here.";
+            StartCoroutine(TypeText(Char2speech, "Yea I'm here. "));
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 4)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "Lets play a couple more games.";
+            StartCoroutine(TypeText(Char1speech, "Lets play a couple more games. "));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -102,13 +102,13 @@ public class DialogueScene5 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "I thought you had to sleep.";
+            StartCoroutine(TypeText(Char2speech, "I thought you had to sleep? "));
             //gameHandler.AddPlayerStat(1);
         }
         else if (primeInt == 6)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "Nah, can’t sleep, just going to stay up a little bit longer";
+            StartCoroutine(TypeText(Char1speech, "Nah, can’t sleep, just going to stay up a little bit longer. "));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -121,12 +121,12 @@ public class DialogueScene5 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Doesn’t your mom get mad for staying up too long?";
+            StartCoroutine(TypeText(Char2speech, "Doesn’t your mom get mad for staying up too long? "));
         }
         else if (primeInt == 8)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "If i’m quiet i won’t get caught.";
+            StartCoroutine(TypeText(Char1speech, "If i’m quiet i won’t get caught. "));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -135,7 +135,7 @@ public class DialogueScene5 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Are you sure you wanna risk it?";
+            StartCoroutine(TypeText(Char2speech, "Are you sure you wanna risk it? "));
         }
         else if (primeInt == 10) 
         {
@@ -146,12 +146,12 @@ public class DialogueScene5 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Your mom is terrifying when she catches you, she's like a demon.";
+            StartCoroutine(TypeText(Char2speech, "Your mom is terrifying when she catches you, she's like a demon. "));
         }
         else if (primeInt == 11)
         { 
             Char1name.text = "YOU";
-            Char1speech.text = "Aren't you the one who convinced me to play?";
+            StartCoroutine(TypeText(Char1speech, "Aren't you the one who convinced me to play? "));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -164,7 +164,7 @@ public class DialogueScene5 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Yea but now I kinda have a bad feeling about this.";
+            StartCoroutine(TypeText(Char2speech, "Yea but now I kinda have a bad feeling about this. "));
             // Turn off "Next" button, turn on "Choice" buttons
             nextButton.SetActive(false);
             allowSpace = false;
@@ -181,7 +181,7 @@ public class DialogueScene5 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Don't blame me if you get caught.";
+            StartCoroutine(TypeText(Char2speech, "Don't blame me if you get caught. "));
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene1Button.SetActive(true);
@@ -206,7 +206,7 @@ public class DialogueScene5 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Alright, cya man.";
+            StartCoroutine(TypeText(Char2speech, "Alright, cya man. "));
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -227,7 +227,7 @@ public class DialogueScene5 : MonoBehaviour
     public void Choice1aFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "Don't be such a killjoy, shut up and play.";
+        StartCoroutine(TypeText(Char1speech, "Don't be such a killjoy, shut up and play. "));
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 99;
@@ -239,7 +239,7 @@ public class DialogueScene5 : MonoBehaviour
     public void Choice1bFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "You know what, you're right. I should probably go.";
+        StartCoroutine(TypeText(Char1speech, "You know what, you're right. I should probably go. "));
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 199;
@@ -257,5 +257,18 @@ public class DialogueScene5 : MonoBehaviour
     {
         SceneManager.LoadScene("Scene6");
     }
-
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.02f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
+    }
 }
