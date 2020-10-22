@@ -1062,6 +1062,9 @@ MonoBehaviour:
   Char3speech: {fileID: 0}
   dialogue: {fileID: 490662649}
   ArtChar1: {fileID: 1131283426}
+  ArtChar2: {fileID: 575093983}
+  ArtChar3: {fileID: 842042438}
+  ArtChar4: {fileID: 595345439}
   ArtBG1: {fileID: 203473013}
   Choice1a: {fileID: 494807038}
   Choice1b: {fileID: 834101167}
