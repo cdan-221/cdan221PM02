@@ -112,7 +112,7 @@ public class DialogueScene4c : MonoBehaviour
         else if (primeInt == 9)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "Or I should just tell her I couldn't find it.";
+            Char1speech.text = "Nah... There is no point of searching more... Right?";
             Char2name.text = "";
             Char2speech.text = "";
             // Turn off "Next" button, turn on "Choice" buttons
@@ -136,6 +136,7 @@ public class DialogueScene4c : MonoBehaviour
         else if (primeInt == 200)
         {
             ArtChar1.SetActive(true);
+            StartCoroutine(FadeIn(ArtChar1));
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
@@ -152,11 +153,20 @@ public class DialogueScene4c : MonoBehaviour
 
         else if (primeInt == 202)
         {
-            ArtChar1.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
-            Char2speech.text = "Hahaha... I don't know why you are so scared right now.";
+            Char2speech.text = "Hahaha...";
+            nextButton.SetActive(false);
+            allowSpace = false;
+            NextScene2Button.SetActive(true);
+        }
+        else if (primeInt == 203)
+        {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "???";
+            Char2speech.text = "why are you are so scared?";
             nextButton.SetActive(false);
             allowSpace = false;
             NextScene2Button.SetActive(true);
@@ -181,7 +191,7 @@ public class DialogueScene4c : MonoBehaviour
     {
         ArtChar1.SetActive(false);
         Char1name.text = "YOU";
-        Char1speech.text = "*Sight* It wouldn't hurt to look a little bit more for the flash light...";
+        Char1speech.text = "*Sight* It wouldn't hurt to look a little bit more.";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 199;
@@ -198,5 +208,30 @@ public class DialogueScene4c : MonoBehaviour
     public void SceneChange5()
     {
         SceneManager.LoadScene("End_Lose");
+    }
+    IEnumerator FadeIn(GameObject fadeImage)
+    {
+        float alphaLevel = 0;
+        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+        for (int i = 0; i < 100; i++)
+        {
+            alphaLevel += 0.01f;
+            yield return null;
+            fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+            Debug.Log("Alpha is: " + alphaLevel);
+        }
+    }
+
+    IEnumerator FadeOut(GameObject fadeImage)
+    {
+        float alphaLevel = 1;
+        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+        for (int i = 0; i < 100; i++)
+        {
+            alphaLevel -= 0.01f;
+            yield return null;
+            fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+            Debug.Log("Alpha is: " + alphaLevel);
+        }
     }
 }

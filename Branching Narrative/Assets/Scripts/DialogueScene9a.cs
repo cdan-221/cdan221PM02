@@ -31,7 +31,7 @@ public class DialogueScene9a : MonoBehaviour
     void Start()
     {         // initial visibility settings
         dialogue.SetActive(false);
-        ArtChar1.SetActive(false);
+        ArtChar1.SetActive(true);
         ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
         ArtBG2.SetActive(false);
@@ -80,7 +80,7 @@ public class DialogueScene9a : MonoBehaviour
         }
         else if (primeInt == 4)
         {
-StartCoroutine(FadeIn(ArtChar2));
+            StartCoroutine(FadeIn(ArtChar2));
             ArtChar1.SetActive(false);
             ArtChar2.SetActive(true);
             Char1name.text = "";
@@ -90,7 +90,7 @@ StartCoroutine(FadeIn(ArtChar2));
         }
         else if (primeInt == 5)
         {
-Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
+Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
@@ -106,7 +106,7 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
         }
         else if (primeInt == 7)
         {
-Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
+Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
@@ -114,7 +114,7 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
         }
         else if (primeInt == 8)
         {
-Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
+Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "DEMON";
@@ -128,8 +128,7 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
-            ArtChar1.SetActive(false);
-            ArtChar2.SetActive(false);
+            StartCoroutine(FadeOut(ArtChar1));
             ArtBG2.SetActive(true);
             ArtBG1.SetActive(false);
             Char1name.text = "YOU";
@@ -211,28 +210,29 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(5f);
     {
         SceneManager.LoadScene("End_Lose");
     }
-
-
-        IEnumerator FadeIn(GameObject fadeImage){
-                float alphaLevel = 0;
-                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
-                for(int i = 0; i < 100; i++){
-                        alphaLevel += 0.01f;
-                        yield return null;
-                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
-                        Debug.Log("Alpha is: " + alphaLevel);
-                }
+    IEnumerator FadeIn(GameObject fadeImage)
+    {
+        float alphaLevel = 0;
+        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+        for (int i = 0; i < 100; i++)
+        {
+            alphaLevel += 0.01f;
+            yield return null;
+            fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+            Debug.Log("Alpha is: " + alphaLevel);
         }
+    }
 
-        IEnumerator FadeOut(GameObject fadeImage){
-                float alphaLevel = 1;
-                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
-                for(int i = 0; i < 100; i++){
-                        alphaLevel -= 0.01f;
-                        yield return null;
-                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
-                        Debug.Log("Alpha is: " + alphaLevel);
-                }
+    IEnumerator FadeOut(GameObject fadeImage)
+    {
+        float alphaLevel = 1;
+        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+        for (int i = 0; i < 100; i++)
+        {
+            alphaLevel -= 0.01f;
+            yield return null;
+            fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+            Debug.Log("Alpha is: " + alphaLevel);
         }
-
+    }
 }

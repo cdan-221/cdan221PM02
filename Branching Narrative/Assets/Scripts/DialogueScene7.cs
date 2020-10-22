@@ -150,7 +150,7 @@ public class DialogueScene7 : MonoBehaviour
         {
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "VOICE";
+            Char2name.text = "???";
             Char2speech.text = "Are you really sure about that?";
             nextButton.SetActive(false);
             allowSpace = false;
@@ -158,9 +158,11 @@ public class DialogueScene7 : MonoBehaviour
         }
         else if (primeInt == 300)
         {
+            ArtChar1.SetActive(true);
+            StartCoroutine(FadeIn(ArtChar1));
             Char1name.text = "";
             Char1speech.text = "";
-            Char2name.text = "VOICE";
+            Char2name.text = "???";
             Char2speech.text = "Don't worry... I'm just your little demon!";
             nextButton.SetActive(false);
             allowSpace = false;
@@ -221,5 +223,30 @@ public class DialogueScene7 : MonoBehaviour
     public void SceneChange8c()
     {
         SceneManager.LoadScene("Scene8c");
+    }
+    IEnumerator FadeIn(GameObject fadeImage)
+    {
+        float alphaLevel = 0;
+        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+        for (int i = 0; i < 100; i++)
+        {
+            alphaLevel += 0.01f;
+            yield return null;
+            fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+            Debug.Log("Alpha is: " + alphaLevel);
+        }
+    }
+
+    IEnumerator FadeOut(GameObject fadeImage)
+    {
+        float alphaLevel = 1;
+        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+        for (int i = 0; i < 100; i++)
+        {
+            alphaLevel -= 0.01f;
+            yield return null;
+            fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+            Debug.Log("Alpha is: " + alphaLevel);
+        }
     }
 }

@@ -75,6 +75,7 @@ public class DialogueScene1 : MonoBehaviour
         }
         else if (primeInt == 3)
         {
+    StartCoroutine(FadeIn(ArtChar1));
             ArtChar1.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
@@ -123,7 +124,7 @@ public class DialogueScene1 : MonoBehaviour
         }
         else if (primeInt == 7)
         {
-            ArtChar1.SetActive(false);
+            StartCoroutine(FadeOut(ArtChar1));
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "";
@@ -211,4 +212,30 @@ public class DialogueScene1 : MonoBehaviour
     {
         SceneManager.LoadScene("Scene2b");
     }
+    IEnumerator FadeIn(GameObject fadeImage)
+    {
+        float alphaLevel = 0;
+        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+        for (int i = 0; i < 100; i++)
+        {
+            alphaLevel += 0.01f;
+            yield return null;
+            fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+            Debug.Log("Alpha is: " + alphaLevel);
+        }
+    }
+
+    IEnumerator FadeOut(GameObject fadeImage)
+    {
+        float alphaLevel = 1;
+        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+        for (int i = 0; i < 100; i++)
+        {
+            alphaLevel -= 0.01f;
+            yield return null;
+            fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+            Debug.Log("Alpha is: " + alphaLevel);
+        }
+    }
+
 }
