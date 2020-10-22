@@ -16,7 +16,6 @@ public class DialogueScene2a : MonoBehaviour
     public Text Char3speech;
     public GameObject dialogue;
     public GameObject ArtChar1;
-    public GameObject ArtChar2;
     public GameObject ArtBG1;
     public GameObject Choice3;
     public GameObject Choice2b;
@@ -31,7 +30,6 @@ public class DialogueScene2a : MonoBehaviour
     {         // initial visibility settings
         dialogue.SetActive(false);
         ArtChar1.SetActive(false);
-        ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
         Choice3.SetActive(false);
         Choice2b.SetActive(false);
@@ -109,8 +107,6 @@ public class DialogueScene2a : MonoBehaviour
         else if (primeInt == 8)
         {
             StartCoroutine(FadeOut(ArtChar1));
-            ArtChar2.SetActive(true);
-            StartCoroutine(FadeIn(ArtChar2));
             Char1name.text = "YOU";
             Char1speech.text = "*Sigh* She will never get it…";
             Char2name.text = "";
