@@ -185,7 +185,7 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(10f);
         else if (primeInt == 200)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "I think I'll play Anti Attack";
+            Char1speech.text = "I think I'll play Anti-Attack again.";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -215,7 +215,7 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(10f);
     public void Choice1bFunct()
     {
         Char1name.text = "YOU";
-        Char1speech.text = "Argh! Whatever! I can't sleep AND I'm not going to wait for them to answer. I'll just go play";
+        Char1speech.text = "Argh! Whatever! I can't sleep AND I'm not going to wait for them to answer. I'll just go play!";
         Char2name.text = "";
         Char2speech.text = "";
         Char3name.text = "";

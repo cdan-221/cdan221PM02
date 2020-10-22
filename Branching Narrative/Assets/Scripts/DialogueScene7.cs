@@ -101,6 +101,7 @@ public class DialogueScene7 : MonoBehaviour
         }
         else if (primeInt == 7)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "VOICE";
@@ -148,6 +149,7 @@ public class DialogueScene7 : MonoBehaviour
         }
         else if (primeInt == 201)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(1f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
@@ -160,6 +162,7 @@ public class DialogueScene7 : MonoBehaviour
         {
             ArtChar1.SetActive(true);
             StartCoroutine(FadeIn(ArtChar1));
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
