@@ -16,6 +16,9 @@ public class DialogueScene5 : MonoBehaviour
     public Text Char3speech;
     public GameObject dialogue;
     public GameObject ArtChar1;
+    public GameObject ArtChar2;
+    public GameObject ArtChar3;
+    public GameObject ArtChar4;
     public GameObject ArtBG1;
     public GameObject Choice1a;
     public GameObject Choice1b;
@@ -30,6 +33,9 @@ public class DialogueScene5 : MonoBehaviour
     {         // initial visibility settings
         dialogue.SetActive(false);
         ArtChar1.SetActive(false);
+        ArtChar2.SetActive(false);
+        ArtChar3.SetActive(false);
+        ArtChar4.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -58,7 +64,10 @@ public class DialogueScene5 : MonoBehaviour
         }
         else if (primeInt == 2)
         {
-            ArtChar1.SetActive(true);
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(false);
+            ArtChar3.SetActive(false);
+            ArtChar4.SetActive(false);
             dialogue.SetActive(true);
             Char1name.text = "YOU";
             Char1speech.text = "Hey, Jimmy, are you still there?";
@@ -67,6 +76,10 @@ public class DialogueScene5 : MonoBehaviour
         }
         else if (primeInt == 3)
         {
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(false);
+            ArtChar3.SetActive(false);
+            ArtChar4.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
@@ -82,6 +95,10 @@ public class DialogueScene5 : MonoBehaviour
         }
         else if (primeInt == 5)
         {
+            ArtChar1.SetActive(true);
+            ArtChar2.SetActive(false);
+            ArtChar3.SetActive(false);
+            ArtChar4.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
@@ -97,6 +114,10 @@ public class DialogueScene5 : MonoBehaviour
         }
         else if (primeInt == 7)
         {
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(true);
+            ArtChar3.SetActive(false);
+            ArtChar4.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
@@ -110,13 +131,18 @@ public class DialogueScene5 : MonoBehaviour
             Char2speech.text = "";
         }
         else if (primeInt == 9)
-        {
+        {       
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
             Char2speech.text = "Are you sure you wanna risk it?";
         }
-        else if (primeInt == 10) {
+        else if (primeInt == 10) 
+        {
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(false);
+            ArtChar3.SetActive(true);
+            ArtChar4.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
@@ -131,6 +157,10 @@ public class DialogueScene5 : MonoBehaviour
         }
         else if (primeInt == 12)
         {
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(true);
+            ArtChar3.SetActive(false);
+            ArtChar4.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
@@ -144,6 +174,10 @@ public class DialogueScene5 : MonoBehaviour
         // ENCOUNTER AFTER CHOICE #1
         else if (primeInt == 100)
         {
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(false);
+            ArtChar3.SetActive(true);
+            ArtChar4.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
@@ -165,6 +199,10 @@ public class DialogueScene5 : MonoBehaviour
 
         else if (primeInt == 200)
         {
+            ArtChar1.SetActive(false);
+            ArtChar2.SetActive(false);
+            ArtChar3.SetActive(false);
+            ArtChar4.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
