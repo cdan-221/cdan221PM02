@@ -53,26 +53,26 @@ public void talking(){         // main story function. Players hit next to progr
                ArtChar1.SetActive(false);
                 dialogue.SetActive(true);
                 Char1name.text = "YOU";
-                Char1speech.text = "Oh man, I stayed up way too late.";
+            StartCoroutine(TypeText(Char1speech, "Oh man, I stayed up way too late. "));
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
                 Char1name.text = "YOU";
-                Char1speech.text = "..........";
+            StartCoroutine(TypeText(Char1speech, ".........."));
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
                 Char1name.text = "YOU";
-                Char1speech.text = "I'm so tired.... I can't even move";
+            StartCoroutine(TypeText(Char1speech, "I'm so tired.... I can't even move. "));
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 5){
                 Char1name.text = "YOU";
-                Char1speech.text = "Wait a minute, I can't move at all!";
+            StartCoroutine(TypeText(Char1speech, "Wait a minute, I can't move at all! "));
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
@@ -82,7 +82,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "DEMON";
-                Char2speech.text = "It's too late for you now.";
+            StartCoroutine(TypeText(Char2speech, "It's too late for you now. "));
         
 
                 
@@ -95,7 +95,7 @@ public void talking(){         // main story function. Players hit next to progr
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 100){
                 Char1name.text = "YOU";
-                Char1speech.text = "I should have just gone to bed earlier..";
+            StartCoroutine(TypeText(Char1speech, "I should have just gone to bed earlier.. "));
                 Char2name.text = "";
                 Char2speech.text = "";
             nextButton.SetActive(false);
@@ -104,7 +104,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
        else if (primeInt == 200){
                 Char1name.text = "YOU";
-                Char1speech.text = "This isn't happening!!";
+            StartCoroutine(TypeText(Char1speech, "This isn't happening!! "));
                 Char2name.text = "";
                 Char2speech.text = "";
             nextButton.SetActive(false);
@@ -116,7 +116,7 @@ public void talking(){         // main story function. Players hit next to progr
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
                 Char1name.text = "YOU";
-                Char1speech.text = "I should have just gone to bed earlier..";
+        StartCoroutine(TypeText(Char1speech, "I should have just gone to bed earlier.. "));
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 99;
@@ -127,7 +127,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
         public void Choice1bFunct(){
                 Char1name.text = "YOU";
-                Char1speech.text = "This isn't happening!!";
+        StartCoroutine(TypeText(Char1speech, "This isn't happening!! "));
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 199;
@@ -143,4 +143,18 @@ public void talking(){         // main story function. Players hit next to progr
         public void SceneChange2b(){
                 SceneManager.LoadScene("End_Lose");
         }
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.01f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
+    }
 }
