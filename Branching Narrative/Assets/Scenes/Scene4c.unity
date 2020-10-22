@@ -350,6 +350,7 @@ GameObject:
   - component: {fileID: 330574341}
   - component: {fileID: 330574342}
   - component: {fileID: 330574343}
+  - component: {fileID: 330574344}
   m_Layer: 5
   m_Name: TextChar2Speech
   m_TagString: Untagged
@@ -419,6 +420,19 @@ MonoBehaviour:
   m_Text: 'Char2 Speech Goes Here
 
 '
+--- !u!114 &330574344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330574340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7c6ab076074964598963bd50e0b969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmount: 1
 --- !u!1 &385816456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,6 +1254,7 @@ GameObject:
   - component: {fileID: 886076453}
   - component: {fileID: 886076455}
   - component: {fileID: 886076454}
+  - component: {fileID: 886076456}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1307,6 +1322,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886076452}
   m_CullTransparentMesh: 0
+--- !u!114 &886076456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886076452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7c6ab076074964598963bd50e0b969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmount: 2
 --- !u!1 &1109901777
 GameObject:
   m_ObjectHideFlags: 0

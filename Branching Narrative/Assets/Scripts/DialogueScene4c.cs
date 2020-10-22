@@ -153,6 +153,7 @@ public class DialogueScene4c : MonoBehaviour
 
         else if (primeInt == 202)
         {
+            Char2speech.gameObject.GetComponentInParent<shaker>().ChangeShake(6f);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "???";
