@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 374447026}
   - component: {fileID: 374447027}
   - component: {fileID: 374447028}
+  - component: {fileID: 374447029}
   m_Layer: 5
   m_Name: TextChar3Speech
   m_TagString: Untagged
@@ -425,6 +426,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!114 &374447029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374447025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7c6ab076074964598963bd50e0b969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmount: 0
 --- !u!1 &382591015
 GameObject:
   m_ObjectHideFlags: 0

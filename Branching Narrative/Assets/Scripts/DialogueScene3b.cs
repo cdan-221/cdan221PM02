@@ -69,12 +69,12 @@ public class DialogueScene3b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Hey, man... It's been 2 hours and you will still choose a game!";
+            StartCoroutine(TypeText(Char2speech, "Hey, man... It's been 2 hours and you will still choose a game! " ));
         }
         else if (primeInt == 3)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "...Give me a minute. I will find one!";
+            StartCoroutine(TypeText(Char1speech, "...Give me a minute. I will find one! " ));
             Char2name.text = "";
             Char2speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -84,12 +84,12 @@ public class DialogueScene3b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Umm... It is okay bro. If you stay more, you won't be get enough sleep.";
+            StartCoroutine(TypeText(Char2speech, "Umm... It is okay bro. If you stay more, you won't be get enough sleep. " ));
         }
         else if (primeInt == 5)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "...";
+            StartCoroutine(TypeText(Char1speech, "... " ));
             Char2name.text = "";
             Char2speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -99,7 +99,7 @@ public class DialogueScene3b : MonoBehaviour
             ArtChar1.SetActive(false);
             ArtChar2.SetActive(true);
             Char1name.text = "YOU";
-            Char1speech.text = "Maybe... Yeah, you are right Jimmy!";
+            StartCoroutine(TypeText(Char1speech, "Maybe... Yeah, you are right Jimmy! " ));
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -108,7 +108,7 @@ public class DialogueScene3b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Don't worry, we can play later!";
+            StartCoroutine(TypeText(Char2speech, "Don't worry, we can play later! " ));
         }
         else if (primeInt == 8)
         {
@@ -223,5 +223,19 @@ public class DialogueScene3b : MonoBehaviour
             fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
             Debug.Log("Alpha is: " + alphaLevel);
         }
+    }
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.02f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
     }
 }

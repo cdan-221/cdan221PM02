@@ -66,7 +66,7 @@ public class DialogueScene6 : MonoBehaviour
         {
             dialogue.SetActive(true);
             Char1name.text = "YOU";
-            Char1speech.text = "You were right Jimmy, a few more games wouldn't hurt!";
+            StartCoroutine(TypeText(Char1speech, "You were right Jimmy, a few more games wouldn't hurt! " ));
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -78,7 +78,7 @@ public class DialogueScene6 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Right? More fun doesn't hurt anybody!";
+            StartCoroutine(TypeText(Char2speech, "Right? More fun doesn't hurt anybody! " ));
             Char3name.text = "";
             Char3speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -86,7 +86,7 @@ public class DialogueScene6 : MonoBehaviour
         else if (primeInt == 4)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "Ok, lets keep going then!";
+            StartCoroutine(TypeText(Char1speech, "Ok, lets keep going then! " ));
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -97,7 +97,7 @@ public class DialogueScene6 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "Sure thing!";
+            StartCoroutine(TypeText(Char2speech, "Sure thing! " ));
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -117,7 +117,7 @@ public class DialogueScene6 : MonoBehaviour
         else if (primeInt == 6)
         {
             Char1name.text = "YOU";
-            Char1speech.text = "Oh no, that's my mom she found out.";
+            StartCoroutine(TypeText(Char1speech, "Oh no, that's my mom she found out. " ));
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -130,7 +130,7 @@ public class DialogueScene6 : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "JIMMY";
-            Char2speech.text = "I told you if you get caught it isnt my fault, you're on your own buddy.";
+            StartCoroutine(TypeText(Char2speech, "I told you if you get caught it isnt my fault, you're on your own buddy. " ));
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -138,7 +138,7 @@ public class DialogueScene6 : MonoBehaviour
         {
             ArtChar4.SetActive(false);
             Char1name.text = "YOU";
-            Char1speech.text = "Huh? How you going to run from this??";
+            Char1speech.text = "Huh? How am I going to run from this??";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -148,6 +148,7 @@ public class DialogueScene6 : MonoBehaviour
             {
                 ArtChar2.SetActive(true);
             StartCoroutine(FadeIn(ArtChar2));
+            Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(2f);
             Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -253,6 +254,20 @@ public class DialogueScene6 : MonoBehaviour
             fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
             Debug.Log("Alpha is: " + alphaLevel);
         }
+    }
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.02f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
     }
 
 }

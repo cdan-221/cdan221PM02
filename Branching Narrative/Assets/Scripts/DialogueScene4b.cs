@@ -75,7 +75,7 @@ public class DialogueScene4b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "PHONE";
-            Char2speech.text = "U up?";
+            StartCoroutine(TypeText(Char2speech, "U up? "));
             Char3name.text = "";
             Char3speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -84,7 +84,7 @@ public class DialogueScene4b : MonoBehaviour
         {
             ArtChar1.SetActive(false);
             Char1name.text = "YOU";
-            Char1speech.text = "Yes?";
+            StartCoroutine(TypeText(Char1speech, "Yes? " ));
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -96,7 +96,7 @@ public class DialogueScene4b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "PHONE";
-            Char2speech.text = "...";
+            StartCoroutine(TypeText(Char2speech, "... " ));
             Char3name.text = "";
             Char3speech.text = "";
             //gameHandler.AddPlayerStat(1);
@@ -107,7 +107,7 @@ public class DialogueScene4b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "PHONE";
-            Char2speech.text = "... \n...";
+            StartCoroutine(TypeText(Char2speech, "... \n... " ));
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -127,7 +127,7 @@ public class DialogueScene4b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "PHONE";
-            Char2speech.text = "...";
+            StartCoroutine(TypeText(Char2speech, "... " ));
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -137,7 +137,7 @@ public class DialogueScene4b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "PHONE";
-            Char2speech.text = "... \n...";
+            StartCoroutine(TypeText(Char2speech, "... \n... " ));
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -146,7 +146,7 @@ public class DialogueScene4b : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "PHONE";
-            Char2speech.text = "... \n... \n...";
+            StartCoroutine(TypeText(Char2speech, "... \n... \n... " ));
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -234,5 +234,19 @@ Char3speech.gameObject.GetComponentInParent<shaker>().ChangeShake(10f);
     public void SceneChange5b()
     {
         SceneManager.LoadScene("Scene5");
+    }
+    IEnumerator TypeText(Text target, string fullText)
+    {
+        float delay = 0.02f;
+        nextButton.SetActive(false);
+        allowSpace = false;
+        for (int i = 0; i < fullText.Length; i++)
+        {
+            string currentText = fullText.Substring(0, i);
+            target.text = currentText;
+            yield return new WaitForSeconds(delay);
+        }
+        nextButton.SetActive(true);
+        allowSpace = true;
     }
 }
