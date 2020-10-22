@@ -1408,6 +1408,7 @@ GameObject:
   - component: {fileID: 1436162855}
   - component: {fileID: 1436162854}
   - component: {fileID: 1436162853}
+  - component: {fileID: 1436162856}
   m_Layer: 5
   m_Name: TextChar2Speech
   m_TagString: Untagged
@@ -1475,6 +1476,19 @@ RectTransform:
   m_AnchoredPosition: {x: -118, y: -243}
   m_SizeDelta: {x: 963, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1436162856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436162852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7c6ab076074964598963bd50e0b969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmount: 2
 --- !u!1 &1661250887
 GameObject:
   m_ObjectHideFlags: 0

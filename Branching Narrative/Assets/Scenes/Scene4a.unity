@@ -548,6 +548,7 @@ GameObject:
   - component: {fileID: 751331144}
   - component: {fileID: 751331146}
   - component: {fileID: 751331145}
+  - component: {fileID: 751331147}
   m_Layer: 5
   m_Name: TextChar2Speech
   m_TagString: Untagged
@@ -615,6 +616,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751331143}
   m_CullTransparentMesh: 0
+--- !u!114 &751331147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751331143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7c6ab076074964598963bd50e0b969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmount: 2
 --- !u!1 &758901708
 GameObject:
   m_ObjectHideFlags: 0
